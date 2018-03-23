@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../tut2-concurrent/tut2-concurrent.iml" filepath="$PROJECT_DIR$/../tut2-concurrent/tut2-concurrent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tut3-concurrent.iml" filepath="$PROJECT_DIR$/tut3-concurrent.iml" />
+    </modules>
+  </component>
+</project>
