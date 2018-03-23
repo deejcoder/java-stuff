@@ -6,7 +6,7 @@ public class InfBuffer {
 
 	    /*
 	        Race conditions still exist (Consumer beats Producer at executing)
-	        - either fix properly
+	        - either fix properly -- fixed: using busy-wait: if queue is empty
 	        - or, sleep all consumers for a longer period.
 	     */
         Handler test = new Handler();

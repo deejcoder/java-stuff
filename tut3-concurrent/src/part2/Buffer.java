@@ -11,7 +11,7 @@ class Buffer {
         Use same lock for both since reading while writing = problem
         and since .removeFirst writes anyway...
      */
-    private final ReentrantLock writeLock = new ReentrantLock();
+    private final ReentrantLock writeLock = new ReentrantLock(true);
 
     public Buffer() {
         queue = new LinkedList<Integer>();
