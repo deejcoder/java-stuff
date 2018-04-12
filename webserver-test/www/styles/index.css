@@ -1,0 +1,39 @@
+h1 {
+    color:white;
+    font-family:"Arial";
+    line-height:1px;
+}
+
+p {
+    color:black;
+    font-family:"Arial";
+    line-height:16px;
+    text-align:center;
+    padding-top:10px;
+}
+
+.note {
+    font-size:9px;
+    color:grey;
+    text-align:left;
+    line-height:5px;
+}
+
+.bubble {
+    background-image: url("/bubble.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size:100px 100px;
+    height:100px;
+    width:100px;
+    position:absolute;
+
+}
+
+img[src="mouse.gif"] {
+   display:inline;
+   z-index:-1;
+}
+body {
+    background-color:black;
+}
