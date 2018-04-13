@@ -52,13 +52,11 @@ public class Server extends Thread {
             }
 
             //Get the input & output streams from the client socket
-            BufferedReader inStream;
+            DataInputStream inStream;
             BufferedOutputStream outStream;
 
             try {
-                inStream = new BufferedReader(
-                        new InputStreamReader(client.getInputStream(), "UTF-8")
-                );
+                inStream = new DataInputStream(client.getInputStream());
                 outStream = new BufferedOutputStream(client.getOutputStream());
             }
             catch(IOException ie) {
@@ -86,7 +84,7 @@ public class Server extends Thread {
      * @param in the input stream
      * @param out the output stream
      */
-    private void read(Socket client, BufferedReader in, BufferedOutputStream out) {
+    private void read(Socket client, DataInputStream in, BufferedOutputStream out) {
         /*
             The below regex will extract the request type i.e GET, followed by
             the filename and finally the file extension (3 groups)
@@ -95,34 +93,37 @@ public class Server extends Thread {
         Pattern pattern = Pattern.compile(requestRegex);
 
         try {
-            //Just read the first line
-            String line = in.readLine();
-            if(line != null) {
+            byte[] bytes = new byte[BUFFER_SIZE];
+            in.read(bytes, 0, BUFFER_SIZE);
+            String data = new String(bytes, "utf-8");
 
-                Matcher m = pattern.matcher(line);
-                if(m.find()) {
-
-                    switch(m.group(0)) {
-                        //GET request
-                        case "GET": {
-                            GetRequestHandler request = new GetRequestHandler();
-                            byte[] data = request.processRequest(line);
-                            send(out, data);
-                            break;
-                        }
-                        case "POST": {
-                            break;
-                        }
-                        //Invalid request type
-                        default: {
-                            client.close();
-                            return;
-                        }
+            Matcher m = pattern.matcher(data);
+            if (m.find()) {
+                switch (m.group(0)) {
+                    case "GET": {
+                        GetRequestHandler request = new GetRequestHandler();
+                        byte[] returnData = request.processRequest(data);
+                        send(out, returnData);
+                        break;
                     }
+                    case "POST": {
+                        PostRequestHandler request = new PostRequestHandler();
+                        byte[] returnData = request.processRequest(data);
+                        send(out, returnData);
+                        break;
+                    }
+                    default:
+                        client.close();
+                        break;
                 }
-
             }
         }
+        /*
+            This will be invoked if:
+            1. client closed connection & there is no data to read.
+            2. character encoding is incorrect
+            3. can't close client connection, because it's  already closed
+         */
         catch(IOException ie) {
             ie.printStackTrace();
             return;

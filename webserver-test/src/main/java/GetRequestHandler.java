@@ -36,6 +36,8 @@ public class GetRequestHandler {
         catch(IOException ie) {
             try {
                 error = 404;
+                fileName = "404";
+                fileExt = ".html";
                 bytes = getResource("404.html");
             }
             catch(IOException ioe) {
@@ -102,13 +104,13 @@ public class GetRequestHandler {
         else {
             error = 400;
             fileName = "400";
-            fileExt = "html";
+            fileExt = ".html";
         }
 
         //If the filename is simply just "/"
         if(fileName.equals("")) {
             fileName = "index";
-            fileExt = "html";
+            fileExt = ".html";
         }
 
         return fileName + fileExt;
