@@ -46,6 +46,7 @@ public class Server extends Thread {
                 ie.printStackTrace();
                 return;
             }
+
             catch(SecurityException se) {
                 se.printStackTrace();
                 continue;
@@ -93,29 +94,32 @@ public class Server extends Thread {
         Pattern pattern = Pattern.compile(requestRegex);
 
         try {
+            //Read data sent from the client
             byte[] bytes = new byte[BUFFER_SIZE];
-            in.read(bytes, 0, BUFFER_SIZE);
+            in.read(bytes);
             String data = new String(bytes, "utf-8");
 
+            //Validate if it's a POST or GET request
             Matcher m = pattern.matcher(data);
             if (m.find()) {
                 switch (m.group(0)) {
                     case "GET": {
-                        GetRequestHandler request = new GetRequestHandler();
-                        byte[] returnData = request.processRequest(data);
+                        GetRequest request = new GetRequest(data);
+                        byte[] returnData = request.processRequest();
                         send(out, returnData);
                         break;
                     }
                     case "POST": {
-                        PostRequestHandler request = new PostRequestHandler();
-                        byte[] returnData = request.processRequest(data);
+                        PostRequest request = new PostRequest(data);
+                        byte[] returnData = request.processRequest();
                         send(out, returnData);
                         break;
                     }
-                    default:
-                        client.close();
-                        break;
                 }
+            }
+            //Request type is not POST or GET, therefore invalid request
+            else {
+                send(out, "400: Bad Request.".getBytes());
             }
         }
         /*

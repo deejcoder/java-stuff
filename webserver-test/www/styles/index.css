@@ -20,7 +20,7 @@ p {
 }
 
 .bubble {
-    background-image: url("/bubble.png");
+    background-image: url("../images/bubble.png");
     background-repeat: no-repeat;
     background-position:center;
     background-size:100px 100px;

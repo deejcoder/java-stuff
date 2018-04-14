@@ -3,13 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Tic Tac Toe</title>
+    <link rel="stylesheet" type="text/css" href="/styles/game.css" />
 </head>
 <body>
+
+    <table id="gameboard">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
 
     <form action="/game.html" method="post">
         <label>Move: </label>
         <input name="moveInput" type="text"/>
-        <submit></submit>
+        <button>Move</button>
     </form>
 
 </body>
