@@ -49,16 +49,14 @@ class Server:
         params = inspect.signature(func).parameters
         return_type = inspect.signature(func).return_annotation
         if str(params['data']) != "data:str":
-            print("ServerFunctionError: function {0} must have a 'data:str' parameter.".format(func))
-            exit()
+            raise NameError("ServerError: function {0} must have a 'data:str' parameter".format(func))
 
         if len(params) != 1:
-            print("ServerFunctionError: function {0}  must have only one parameter.".format(func))
-            exit()
+            raise NameError("ServerError: function {0} must have only one parameter".format(func))
         
         if str(return_type) == "str":
-            print("ServerFunctionError: function {0} must have a str return type specified.".format(func))
-            exit()
+            raise NameError("ServerError: function {0} must have a str return type specified".format(func))
+            
         return True
 
 
