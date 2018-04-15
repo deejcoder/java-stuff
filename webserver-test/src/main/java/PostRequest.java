@@ -71,15 +71,15 @@ public class PostRequest {
         SocketAddress appEndPoint;
 
         switch(fileName) {
-            case "tictactoe":
-                appEndPoint = new InetSocketAddress("127.0.0.1", 5000);break;
+            case "game":
+                appEndPoint = new InetSocketAddress("127.0.0.1", 5050);break;
             default:
                 return null;
         }
 
         Socket socket = new Socket();
         try {
-
+            System.out.println(data);
             socket.connect(appEndPoint);
             InputStream inStream = socket.getInputStream();
             OutputStream outStream = socket.getOutputStream();
@@ -89,7 +89,7 @@ public class PostRequest {
             byte[] responseBytes = new byte[RESPONSE_BUFFER_SIZE];
             inStream.read(responseBytes);
 
-            String response = new String(responseBytes, "UTF-8");
+            String response = new String(responseBytes, "UTF-8").trim();
             System.out.println(response);
             return response;
 

@@ -86,10 +86,7 @@ public class Server extends Thread {
      * @param out the output stream
      */
     private void read(Socket client, DataInputStream in, BufferedOutputStream out) {
-        /*
-            The below regex will extract the request type i.e GET, followed by
-            the filename and finally the file extension (3 groups)
-         */
+        //Using regex to validate requests...
         String requestRegex = "^(GET|POST)";
         Pattern pattern = Pattern.compile(requestRegex);
 
@@ -99,7 +96,7 @@ public class Server extends Thread {
             in.read(bytes);
             String data = new String(bytes, "utf-8");
 
-            //Validate if it's a POST or GET request
+            //Is it a POST or GET request?
             Matcher m = pattern.matcher(data);
             if (m.find()) {
                 switch (m.group(0)) {
