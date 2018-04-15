@@ -47,7 +47,7 @@ public class PostRequest {
                 //Try send data to ideal application server
                 String response = routeRequest(data);
                 if(response != null) {
-                    return response.getBytes();
+                    return ("HTTP/2.0 200 OK\r\ncontent-type: application/json;charset=UTF-8\r\n\r\n" + response).getBytes();
                 }
                 else {
                     //Not Found: Couldn't find matching App Server or can't connect
@@ -72,7 +72,7 @@ public class PostRequest {
 
         switch(fileName) {
             case "game":
-                appEndPoint = new InetSocketAddress("127.0.0.1", 5050);break;
+                appEndPoint = new InetSocketAddress("127.0.0.1", 5051);break;
             default:
                 return null;
         }
@@ -124,13 +124,13 @@ public class PostRequest {
             This regex will extract the body content of the request, which contains the POST data
             that the user has provided. It must be in the form: {VARIABLE}={SOME+CONTENT}
          */
-        String regex = "\\r\\n(([\\w\\d+]{0,}\\={1}[\\w\\d+]{0,}\\n{0,1}){1,})";
+        String regex = "\\r\\n(\\{[{\"\\w\\d:,}]*)";
         Pattern pattern = Pattern.compile(regex);
         Matcher pm = pattern.matcher(request);
 
         //If result found, return results.
         if(pm.find()) {
-            return pm.group(2);
+            return pm.group(1);
         }
 
         //Else return null

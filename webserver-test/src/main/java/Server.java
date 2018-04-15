@@ -95,6 +95,7 @@ public class Server extends Thread {
             byte[] bytes = new byte[BUFFER_SIZE];
             in.read(bytes);
             String data = new String(bytes, "utf-8");
+            System.out.println(data);
 
             //Is it a POST or GET request?
             Matcher m = pattern.matcher(data);

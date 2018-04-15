@@ -23,7 +23,7 @@ public class GetRequest {
     public GetRequest(String request) {
 
         //Regex is used to validate GET request & extract file name/ext
-        String regex = "^(GET) \\/([\\w\\d\\/]{0,})([.\\w]{0,6})";
+        String regex = "^(GET) \\/([\\w\\d\\/-]{0,})([.\\w]{0,16})";
         Pattern pattern = Pattern.compile(regex);
         Matcher m = pattern.matcher(request);
 
