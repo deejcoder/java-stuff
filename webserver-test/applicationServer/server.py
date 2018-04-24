@@ -9,6 +9,7 @@ import inspect
     For now I have tried making it as scalable as possible
 """
 class Server:
+    #Initialize the server, but do not start it.
     def __init__(self, host : str, port : int, on_data_func : callable):
 
         #validate the provided callback
@@ -19,22 +20,29 @@ class Server:
         self.BUFFER_SIZE = 516
         self.on_incoming_data = on_data_func
 
+        #Create a TCP socket
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.shutdown = True
         
     
     def start(self):
+        #Bind the socket to an address
         self.socket.bind((self.host, self.port))
+        #Start listening on the socket
         self.socket.listen()
         self.shutdown = False
 
+        #Recieve data until the server has been shutdown
         while not self.shutdown:
             (sock, addr) = self.socket.accept()
             with sock:
                 data = sock.recv(self.BUFFER_SIZE).decode("utf-8")
 
                 if(data):
+                    #Forward the incoming data to a callback
                     response = self.on_incoming_data(data)
+
+                    #The callback will return a String, send this string
                     sock.send(response.encode())
                 else:
                     pass
@@ -44,7 +52,10 @@ class Server:
     def close(self):
         self.shutdown = True
 
-            
+    """
+    Validating the callback: assure it has the suitable static types defined,
+    and suitable number of parameters.
+    """
     def is_valid_data_callback(self, func : callable):
         params = inspect.signature(func).parameters
         return_type = inspect.signature(func).return_annotation

@@ -7,7 +7,7 @@ var TicTacToe = (function() {
     }
 
     function init() {
-        //sendRequest("", function() { return; });
+
         $(document).ready(function() {
 
             DOM.board = {
@@ -72,8 +72,16 @@ var TicTacToe = (function() {
         var xhttp = new XMLHttpRequest();
 
         xhttp.onreadystatechange = function() {
+
+            //On HTTP 200 OK,
             if(this.readyState == 4 && this.status == 200) {
+                //Transform the result into a JS object
                 var jsonObj = JSON.parse(this.responseText);
+
+                //If there is no data, exit
+                if(Object.keys(jsonObj).length < 1) return false;
+
+                //Otherwise return the callback
                 return responseFunction(jsonObj);
             }
         };
@@ -114,11 +122,11 @@ var TicTacToe = (function() {
             */
            //sendRequest("", function() { return true; });
            sendRequest(
-            {
-                action: "move",
-                row: row,
-                col: cell
-            },
+                {
+                    action: "move",
+                    row: row,
+                    col: cell
+                },
 
                 /*
                     This is the response from
@@ -154,6 +162,9 @@ var TicTacToe = (function() {
 
         });
 
+        /*
+            Resetting the game
+        */
        DOM.board.$reset.click(function(e) {
             sendRequest(
                 {
