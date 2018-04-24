@@ -188,6 +188,7 @@ public class GetRequest {
         byte[] bytes = new byte[(int)file.length()];
         FileInputStream fin = new FileInputStream(file);
         fin.read(bytes, 0, bytes.length);
+        fin.close();
 
         return bytes;
     }

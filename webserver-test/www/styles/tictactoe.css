@@ -1,0 +1,37 @@
+#gameboard td {
+    width:80px;
+    height:80px;
+    background-color:grey;
+    font-size:40px;
+    font-family: "Arial";
+    text-align:center;
+    color:white;
+}
+
+#gameboard td:hover {
+    background-color:lightgrey;
+    cursor: pointer;
+}
+
+.error {
+    color:red;
+    font-style:italic;
+}
+
+p, h1, h2, h3, b {
+    font-family:"Arial";
+}
+
+#gamewrapper #identity {
+    position:absolute;
+    z-index:1;
+    background-color:lightgrey;
+    height:calc(80*3px);
+    width:calc(80*3px);
+    padding:10px;
+}
+
+body {
+    margin-left: 500px;
+    margin-right:500px;
+}

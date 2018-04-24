@@ -6,6 +6,11 @@ import java.net.SocketAddress;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/*
+    The Server class contains the basic
+    server operations of listen, read and send.
+ */
+
 public class Server extends Thread {
 
     private final SocketAddress localEndpoint;
@@ -52,6 +57,7 @@ public class Server extends Thread {
                 continue;
             }
 
+            //--
             //Get the input & output streams from the client socket
             DataInputStream inStream;
             BufferedOutputStream outStream;
@@ -65,9 +71,13 @@ public class Server extends Thread {
                 continue;
             }
 
+            //--
             //Read data from the client
             read(client, inStream, outStream);
 
+
+            //--
+            //Close client connection
             try {
                 outStream.flush();
                 client.close();

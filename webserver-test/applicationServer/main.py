@@ -1,46 +1,56 @@
 import server
 import re
 import json
+import random
 
-#generate a 3x3 gameboard
-g_board = [[None for x in range(0, 3)] for y in range(0,3)]
-g_winner = None
-counter = 1
+import board
 
+board = board.Board()
 
 def on_incoming_data(data : str) -> str:
-
+    global board
+    print(data)
     try:
-        (row, col) = get_player_move(data)
+        action = get_player_action(data)
     except ValueError:
-        return ""
+        return "{}"
 
+    if action == "reset":
+        board.reset()
+        return "{}"
+    elif action == "getstate":
+        array = board.get_board()
+        return json.JSONEncoder().encode({"moves":array})
+        
+    elif action == "move":
 
-    global g_board
-    g_board[row][col] = 1 # let 1 represent player
-    pc_move = make_move()
-    response = json.JSONEncoder().encode({"winner":g_winner, "move":pc_move})
-    return response
-
-def make_move() -> (int, int):
-    global g_board
-    global g_winner
-    global counter
-    move = (counter,counter)
-    counter += 1
-    if counter > 3:
-        counter = 1
-    return move
-
+        print("test")
+        try:
+            move = get_player_move(data)
+            response = board.player_move(move)
+            return response
+        except ValueError:
+            return "{}"
+    else:
+        return "{}"
 
 
 def get_player_move(data : str) -> (int,int):
     result = json.loads(data)
     try:
-        return (result['row'], result['col'])
+        return (result['row'] - 1, result['col'] - 1)
     except:
         raise ValueError("Invalid JSON passed from server")
     return None
 
-server = server.Server("127.0.0.1", 5051, on_incoming_data)
+def get_player_action(data : str) -> str:
+    result = json.loads(data)
+    try:
+        return result['action']
+    except:
+        raise ValueError("Invalid JSON passed from server")
+    return None
+
+
+server = server.Server("127.0.0.1", 5050, on_incoming_data)
 server.start()
