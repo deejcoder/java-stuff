@@ -10,6 +10,14 @@ public class ApiRequest {
 
     private final static int RESPONSE_BUFFER_SIZE = 128;
 
+    /**
+     * Makes an API request to the ideal application server
+     * @param fileName the requested file name from the client
+     * @param fileExt the requested file extension from the client
+     * @param data the data to pass to the application server
+     * @return
+     * @throws FileNotFoundException when there is no ideal application server
+     */
     static String request(String fileName, String fileExt, String data) throws FileNotFoundException {
         SocketAddress appEndPoint;
 
@@ -21,7 +29,7 @@ public class ApiRequest {
              and wait for a response from the API since if the app server doesn't respond or takes a while
              to respond, it'll lag the entire server.
          */
-        System.out.println(fileName);
+
         switch(fileName) {
             case "api/games/tictactoe":
                 appEndPoint = new InetSocketAddress("127.0.0.1", 5050);break;

@@ -7,8 +7,10 @@ import java.util.regex.Pattern;
 
 /*
 
-    This file contains Utils for generating a response back to the
-    client. It also handles incoming GET requests.
+    This file handles GET requests,
+    1. validates the request, if not valid return 400
+    2. tries to get the requested resource
+    3. if the resource is found, return it otherwise return 404
 
  */
 public class GetRequest {
@@ -32,7 +34,7 @@ public class GetRequest {
             validating it's a valid HTTP GET request
          */
         if (m.find()) {
-            validRequest = true;
+
             fileName = m.group(2);
             fileExt = m.group(3);
 
@@ -41,18 +43,26 @@ public class GetRequest {
                 fileName = "index";
                 fileExt = ".html";
             }
+
+            //It's a valid request
+            validRequest = true;
         }
     }
 
+    /**
+     * Validates the GET request and then tries to find the requested resource
+     * @return byte[] of the response
+     */
     public byte[] processRequest() {
 
+        //Valid GET request?
         if(isValidGetRequest()) {
             String fileName = getFileName();
             String fileExt = getFileExt();
 
 
-            byte[] data;
             //Does the requested resource exist?
+            byte[] data;
             try {
                 data = getResource(fileName + fileExt);
             }
@@ -65,6 +75,7 @@ public class GetRequest {
             //Generate the header & return the response
             String header = generateHeader(fileExt);
 
+            //Combine the header & data from the file
             byte[] out = combineStringBytes(header, data);
             return out;
 
@@ -73,6 +84,52 @@ public class GetRequest {
             //Bad Request: not a valid GET request
             return generateError(400);
         }
+    }
+
+
+    /**
+     * Checks if the request is valid
+     * @return true or false (boolean)
+     */
+    public boolean isValidGetRequest() {
+        if(validRequest) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * Gets the file name of the requested resource
+     * @return the file name as a String
+     */
+    public String getFileName() {
+        return fileName;
+    }
+
+    /**
+     * Gets the file extension of the requested resource
+     * @return the file extension as a String
+     */
+    public String getFileExt() {
+        return fileExt;
+    }
+
+    /**
+     * Reads a file
+     * @param filePath the path to the file
+     * @return the bytes of the file
+     * @throws IOException
+     */
+    protected byte[] getResource(String filePath) throws IOException {
+
+        File file = new File((RESOURCE_PATH + filePath));
+
+        byte[] bytes = new byte[(int)file.length()];
+        FileInputStream fin = new FileInputStream(file);
+        fin.read(bytes, 0, bytes.length);
+        fin.close();
+
+        return bytes;
     }
 
     /**
@@ -146,50 +203,5 @@ public class GetRequest {
         System.arraycopy(stringBytes, 0, out, 0, stringBytes.length);
         System.arraycopy(bytes, 0, out, stringBytes.length, bytes.length);
         return out;
-    }
-
-    /**
-     * Checks if the request is valid
-     * @return true or false (boolean)
-     */
-    public boolean isValidGetRequest() {
-        if(validRequest) {
-            return true;
-        }
-        return false;
-    }
-
-    /**
-     * Gets the file name of the requested resource
-     * @return the file name as a String
-     */
-    public String getFileName() {
-        return fileName;
-    }
-
-    /**
-     * Gets the file extension of the requested resource
-     * @return the file extension as a String
-     */
-    public String getFileExt() {
-        return fileExt;
-    }
-
-    /**
-     * Reads a file
-     * @param filePath the path to the file
-     * @return the bytes of the file
-     * @throws IOException
-     */
-    protected byte[] getResource(String filePath) throws IOException {
-
-        File file = new File((RESOURCE_PATH + filePath));
-
-        byte[] bytes = new byte[(int)file.length()];
-        FileInputStream fin = new FileInputStream(file);
-        fin.read(bytes, 0, bytes.length);
-        fin.close();
-
-        return bytes;
     }
 }
