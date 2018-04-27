@@ -36,7 +36,10 @@ class Server:
         while not self.shutdown:
             (sock, addr) = self.socket.accept()
             with sock:
-                data = sock.recv(self.BUFFER_SIZE).decode("utf-8")
+                try:
+                    data = sock.recv(self.BUFFER_SIZE).decode("utf-8")
+                except UnicodeDecodeError:
+                    sock.send("Invalid Unicode detected.".encode())
 
                 if(data):
                     #Forward the incoming data to a callback
@@ -45,7 +48,7 @@ class Server:
                     #The callback will return a String, send this string
                     sock.send(response.encode())
                 else:
-                    pass
+                    sock.send("There was no data passed.".encode())
 
                 sock.close()
 

@@ -58,7 +58,7 @@ public class PostRequest {
                 try {
                     response = ApiRequest.request(fileName, fileExt, data);
                     if(response != null) {
-                        return ("HTTP/2.0 200 OK\r\ncontent-type: application/json;charset=UTF-8\r\n\r\n" + response).getBytes();
+                        return ("HTTP/1.1 200 OK\r\ncontent-type: application/json;charset=UTF-8\r\n\r\n" + response).getBytes();
                     }
                     else {
                         //Not Found: Couldn't find matching App Server or can't connect

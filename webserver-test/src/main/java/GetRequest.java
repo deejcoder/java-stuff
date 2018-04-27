@@ -138,7 +138,7 @@ public class GetRequest {
      * @return the generated header as a String
      */
     public String generateHeader(String fileExt) {
-        String header = "HTTP/2.0 200 OK\r\n";
+        String header = "HTTP/1.1 200 OK\r\n";
 
         switch(fileExt) {
             default:
@@ -159,7 +159,7 @@ public class GetRequest {
      */
     public byte[] generateError(int error) {
         //Generate the error's header
-        String header = "HTTP/2.0 ";
+        String header = "HTTP/1.1 ";
 
         switch(error) {
             case 400:
