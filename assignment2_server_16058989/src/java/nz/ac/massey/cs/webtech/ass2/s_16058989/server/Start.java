@@ -34,7 +34,13 @@ public class Start extends HttpServlet {
             switch(URI[URI.length-1]) {
                 case "ustart": {
 
-                    createGame(request, Board.Player.COMPUTER);
+                    //TODO: possibly need to check if the session already exists,
+                    if(createGame(request, Board.Player.COMPUTER)) {
+                        out.println("sucess");
+                    }
+                    else {
+                        out.println("game in-progress");
+                    }
                     break;
                 }
                 case "istart": {
@@ -65,6 +71,8 @@ public class Start extends HttpServlet {
         //Create a new session for the client
         HttpSession session = request.getSession(true);
 
+        
+        //TODO: add support for if client browser rejects cookies
         if(session.isNew()) {
             
             //Create a new board for the client

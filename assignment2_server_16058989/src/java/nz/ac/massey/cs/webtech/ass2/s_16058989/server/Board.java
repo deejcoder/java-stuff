@@ -5,16 +5,21 @@
  */
 package nz.ac.massey.cs.webtech.ass2.s_16058989.server;
 
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.logging.Logger;
 
 /**
  *
  * @author Octet
  */
+
+
 public class Board {
     
+    /**
+     * Defines a Player
+     */
     public enum Player {
         NONE ("None", "_"),
         COMPUTER ("Computer", "O"),
@@ -83,14 +88,14 @@ public class Board {
      * Returns an ArrayList containing all the possible moves [row,col]
      * @return
      */
-    public ArrayList<Integer[]> getPossibleMoves() {
-        ArrayList<Integer[]> possible = new ArrayList<Integer[]>();
+    public ArrayList<Vector> getPossibleMoves() {
+        ArrayList<Vector> possible = new ArrayList<Vector>();
         
         for(int row = 0; row < SIZE; row++) {
             for(int col = 0; col < SIZE; col++) {
                 if(board[row][col] == Player.NONE) {
-                    Integer[] grid = {row, col};
-                    possible.add(grid);
+                    Vector vector = new Vector(row, col);
+                    possible.add(vector);
                 }
             }
         }
@@ -113,6 +118,32 @@ public class Board {
             out += "\n";
         }
         return out;
+    }
+    
+    /**
+     * Allows a player to move, given x & y values.
+     * @param x
+     * @param y
+     * @return true if the move was accepted, else false.
+     */
+    public boolean movePlayer(int x, int y) {
+        //Get all the possible moves
+        ArrayList<Vector> possible = getPossibleMoves();
+        
+        //If there are possible moves,
+        if(!possible.isEmpty()) {
+        
+            /*  Check if the move by the player is possible
+                before giving the player the move
+            */
+            Vector vector = new Vector(x, y);
+            
+            if(possible.contains(vector)) {
+                board[x][y] = Player.CLIENT;
+                return true;
+            }
+        }
+        return false;
     }
     
 }

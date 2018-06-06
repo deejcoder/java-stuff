@@ -12,8 +12,17 @@ and open the template in the editor.
     </head>
     <body>
         <form action="/assignment2_server_16058989/ttt/istart" method="POST">
-            <button></button>
+            <button>New game</button>
         </form>
-        <div>TODO write content</div>
+        <form action="/assignment2_server_16058989/ttt/move/x1y2" method="POST">
+            <button>Move</button>
+        </form>
+        <div>
+            TODO:
+            <ul>
+                <li>When cookies are blocked by the client's browser, sessions should still work.</li>
+                <li>Error control: return Bad Request for Move (bad move or invalid request).</li>
+            </ul>
+        </div>
     </body>
 </html>

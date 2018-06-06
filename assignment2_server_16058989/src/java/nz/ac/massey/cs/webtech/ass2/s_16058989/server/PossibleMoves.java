@@ -7,6 +7,7 @@ package nz.ac.massey.cs.webtech.ass2.s_16058989.server;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -47,8 +48,8 @@ public class PossibleMoves extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             
             //Get all the available possibles, return them
-            for(Integer[] pos : board.getPossibleMoves()) {
-                out.println(pos[0] + "," + pos[1]);
+            for(Vector pos : board.getPossibleMoves()) {
+                out.println(pos.x + "," + pos.y);
 
             }
         }

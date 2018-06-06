@@ -63,7 +63,7 @@ public class Winner extends HttpServlet {
                     }
                     //If draw, or no one has won...
                     case NONE: {
-                        if(board.getPossibleMoves().size() == 0) {
+                        if(board.getPossibleMoves().isEmpty()) {
                             out.println("Draw");
                             break;
                         }
