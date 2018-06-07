@@ -13,18 +13,20 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Tic Tac Toe</title>
         
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="./javascript/ttt.js" type="text/javascript"></script>
     </head>
     <body>
 
-        <script type="text/javascript">console.log(ttt);</script>
+        <div id="gameBoard">
+        </div>
         <div id="gameControls">
             <button onclick="ttt.createGame('client');">New Game</button>
         </div>
         <div id="moveControls">
-            <input type="number" min="0" max="2" />
-            <input type="number" min="0" max="2" />
-            <button>Move</button>
+            <input type="number" min="0" max="2" class="move_x" />
+            <input type="number" min="0" max="2" class="move_y" />
+            <button onclick="ttt.makeMove();">Move</button>
         </div>
     </body>
 </html>

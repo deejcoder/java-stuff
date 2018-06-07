@@ -89,7 +89,7 @@ public class Board {
      * @return
      */
     public ArrayList<Vector> getPossibleMoves() {
-        ArrayList<Vector> possible = new ArrayList<Vector>();
+        ArrayList<Vector> possible = new ArrayList<>();
         
         for(int row = 0; row < SIZE; row++) {
             for(int col = 0; col < SIZE; col++) {
@@ -127,6 +127,12 @@ public class Board {
      * @return true if the move was accepted, else false.
      */
     public boolean movePlayer(int x, int y) {
+        /*
+            TODO: check if gameover, if it is DO NOT move (checkWinner())
+        */
+        if(checkWinner()) {
+            return false;
+        }
         //Get all the possible moves
         ArrayList<Vector> possible = getPossibleMoves();
         
@@ -140,6 +146,7 @@ public class Board {
             
             if(possible.contains(vector)) {
                 board[x][y] = Player.CLIENT;
+                turn = Player.COMPUTER;
                 return true;
             }
         }
@@ -148,10 +155,19 @@ public class Board {
     
     /**
      * Triggers the computer to make a random move.
+     * @return true if the computer is successful at making a move
      */
-    public void moveComputer() {
+    public boolean moveComputer() {
+        //TODO: check if gameover, if it is do NOT move
+        if(checkWinner()) {
+            return false;
+        }
         //Get a list of all possible moves
         ArrayList<Vector> possible = getPossibleMoves();
+        
+        if(possible.isEmpty()) {
+            return false;
+        }
         
         //Choose a random move
         Random random = new Random();
@@ -160,7 +176,56 @@ public class Board {
         
         //Update the board
         board[vector.x][vector.y] = Player.COMPUTER;
+        turn = Player.CLIENT;
+        return true;
         
+    }
+    
+    public boolean checkWinner() {
+        if(getWinner() != Player.NONE) {
+            return true;
+        }
+        
+        
+        //CONDITION 1: player as occupied a diagonal
+        if(board[0][0].equals(board[1][1])
+                && board[0][0].equals(board[2][2])
+                && !board[0][0].equals(Player.NONE)) {
+            winner = board[0][0];
+            return true;
+        }
+        
+        if(board[0][2].equals(board[1][1])
+                && board[0][2].equals(board[2][0])
+                && !board[0][2].equals(Player.NONE)) {
+            winner = board[0][2];
+            return true;
+        }
+        //====
+        for(int i = 0; i < SIZE; i++) {
+            
+            //CONDITION 2: player as occupied an entire row
+            if(board[i][0].equals(board[i][1]) 
+                    && board[i][0].equals(board[i][2])
+                    && !board[i][0].equals(Player.NONE)) {
+                winner = board[i][0];
+                return true;
+            }
+            //====
+            
+            //CONDITION 3: player as occupied entire column
+            if(board[0][i].equals(board[1][i])
+                    && board[0][i].equals(board[2][i])
+                    && !board[0][i].equals(Player.NONE)) {
+                winner = board[0][i];
+                return true;
+            }
+            //====
+              
+        }
+        
+        //The winner will be the last opposite of 'turn' variable, !turn
+        return false;
     }
     
 }

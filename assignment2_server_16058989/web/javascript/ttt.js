@@ -6,6 +6,9 @@
  * 
  * This file provides functionality to the Tic Tac Toe game, communicating with
  * the Tomcat server.
+ * 
+ * Dependencies:
+ * |- jQuery
  */
 
 'use strict';
@@ -18,12 +21,12 @@ var ttt = (function() {
      */
     /**
      * Global variables/constants
-     * @type type
      */
    var global = {
        url : {
            move : './ttt/move/',
            state : './ttt/state',
+           won : './ttt/won',
            ustart : './ttt/ustart',
            istart : './ttt/istart'
        },
@@ -31,10 +34,6 @@ var ttt = (function() {
            client : 'client',
            computer : 'computer'
        },
-       input : {
-           move_x : '#moveControls .move_x',
-           move_y : '#moveControls .move_y'
-       }
    };
    
    
@@ -49,7 +48,18 @@ var ttt = (function() {
     * @returns {undefined}
     */
    function init() {
-       //createGame("computer");
+       
+       $(document).ready(function() {
+           
+           global.elem = {
+                $move_x : $('#moveControls .move_x'),
+                $move_y : $('#moveControls .move_y'),
+                $board : $('#gameBoard')
+           };
+       });
+           
+       
+       
    }
    
    
@@ -60,7 +70,7 @@ var ttt = (function() {
     */
    function createGame(starter) {
 
-        var onData = function response(data) {
+        var onData = function response(data, status) {
             return updateBoard();
         };
 
@@ -74,9 +84,39 @@ var ttt = (function() {
     
     
     function makeMove() {
+        var x = global.elem.$move_x.val();
+        var y = global.elem.$move_y.val();
         
+        var url = global.url.move + "x" + x + "y" + y;
+        
+        sendRequest(url, "POST", "", function(data, status) {
+            if(status === 400) {
+                console.log("Oh dear! Invalid move, try again.");
+            }
+        });
+        
+        updateBoard();
+        isGameover();
     }
     
+    
+    function isGameover() {
+        sendRequest(global.url.won, "GET", "", function(data, status) {
+            if(status === 200) {
+                console.log(data);
+                
+                switch(data.trim()) {
+                    case "Player":
+                        alert("You have won!");
+                        break;
+                    case "Computer":
+                        alert("Oh no! You have lost!");
+                        break;
+                }
+            }
+        });
+        return false;
+    }
     
     
     
@@ -93,13 +133,13 @@ var ttt = (function() {
      * @param {type} response the function to return the response data to.
      * @returns {undefined}
      */
-   function sendRequest(url, type = "POST", data = "", response = function(d){}) {
+   function sendRequest(url, type = "POST", data = "", response = function(d, s){}) {
        
        var xhttp = new XMLHttpRequest();
        
        xhttp.onreadystatechange = function() {
-           if(this.readyState === 4 && this.status === 200) {
-               return response(this.responseText);
+           if(this.readyState === 4) {
+               return response(this.responseText, this.status);
            }
        };
        
@@ -114,8 +154,8 @@ var ttt = (function() {
     * @returns {undefined}
     */
    function updateBoard() {
-       sendRequest(global.url.state, "GET", "", function(data) {
-           document.write(data);
+       sendRequest(global.url.state, "GET", "", function(data, status) {
+           global.elem.$board.text(data);
        });
    }
    
@@ -129,6 +169,8 @@ var ttt = (function() {
    return {
        init: init(),
        global: global,
-       createGame: createGame
+       createGame: createGame,
+       makeMove: makeMove,
+       isGameover: isGameover,
    };
 }());
