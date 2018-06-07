@@ -57,6 +57,7 @@ public class Move extends HttpServlet {
             int y = Integer.parseInt(matcher.group(2));
             
             if(board.movePlayer(x, y)) {
+                board.moveComputer();
                 return;
             }
 
@@ -73,7 +74,7 @@ public class Move extends HttpServlet {
      */
     @Override
     public String getServletInfo() {
-        return "Short description";
+        return "Performs a move, posted by the client.";
     }// </editor-fold>
 
 }

@@ -84,7 +84,7 @@ public class Winner extends HttpServlet {
 
     @Override
     public String getServletInfo() {
-        return "Short description";
+        return "Informs the client of the winner of the game.";
     }// </editor-fold>
 
 }

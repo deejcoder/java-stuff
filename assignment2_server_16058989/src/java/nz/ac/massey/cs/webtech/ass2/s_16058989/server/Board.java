@@ -5,9 +5,9 @@
  */
 package nz.ac.massey.cs.webtech.ass2.s_16058989.server;
 
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Random;
 
 /**
  *
@@ -144,6 +144,23 @@ public class Board {
             }
         }
         return false;
+    }
+    
+    /**
+     * Triggers the computer to make a random move.
+     */
+    public void moveComputer() {
+        //Get a list of all possible moves
+        ArrayList<Vector> possible = getPossibleMoves();
+        
+        //Choose a random move
+        Random random = new Random();
+        int randomInt = random.nextInt(possible.size());
+        Vector vector = possible.get(randomInt);
+        
+        //Update the board
+        board[vector.x][vector.y] = Player.COMPUTER;
+        
     }
     
 }

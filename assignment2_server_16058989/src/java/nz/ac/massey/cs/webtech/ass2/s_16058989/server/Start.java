@@ -80,7 +80,7 @@ public class Start extends HttpServlet {
             board.setTurn(starter);
             
             if(starter == Board.Player.COMPUTER) {
-                //do computer's move, maybe
+                board.moveComputer();
             }
             
             //Map the board to the session

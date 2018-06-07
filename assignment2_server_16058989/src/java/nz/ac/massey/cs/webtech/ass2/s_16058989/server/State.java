@@ -54,7 +54,7 @@ public class State extends HttpServlet {
      */
     @Override
     public String getServletInfo() {
-        return "Short description";
+        return "Serves the current state of the client's game board.";
     }// </editor-fold>
 
 }
