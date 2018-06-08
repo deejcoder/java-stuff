@@ -27,32 +27,23 @@ public class Start extends HttpServlet {
     {
         
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
             
         
-            String[] URI = request.getRequestURI().split("/");
-            switch(URI[URI.length-1]) {
-                case "ustart": {
+        String[] split = request.getRequestURI().split(";")[0].split("/");
+        String URI = split[split.length-1];
 
-                    //TODO: possibly need to check if the session already exists,
-                    if(createGame(request, Board.Player.COMPUTER)) {
-                    }
-                    else {
-                        
-                    }
-                    break;
-                }
-                case "istart": {
-
-                    createGame(request, Board.Player.CLIENT);
-                    break;
-                }
-                default: {
-                    response.sendError(HttpServletResponse.SC_BAD_REQUEST);
-                    break;
-                }
-            }
+        switch(URI) {
+            case "ustart": 
+                createGame(request, response, Board.Player.COMPUTER); 
+                break;
+            case "istart": 
+                createGame(request, response, Board.Player.CLIENT); 
+                break;
+            default: 
+                response.sendError(HttpServletResponse.SC_BAD_REQUEST); 
+                return;
         }
+
     }
     /*
     TODO: method that creates session, then istart: player starts, ustart: computer starts 
@@ -62,16 +53,18 @@ public class Start extends HttpServlet {
     /**
      * Creates a new game instance.
      * @param request the original request sent from the client's browser
+     * @param response the response
      * @param starter the player that should start (CLIENT or COMPUTER).
      * @return boolean indicating if the game was created.
+     * @throws java.io.IOException
      */
-    public boolean createGame(HttpServletRequest request, Board.Player starter) {
+    public boolean createGame(HttpServletRequest request, HttpServletResponse response, Board.Player starter)
+        throws IOException
+    {
         
-        //Create a new session for the client
+        //Create/Overwrite a new session for the client
         HttpSession session = request.getSession(true);
 
-        
-        //TODO: add support for if client browser rejects cookies
         if(!session.isNew()) {
             session.invalidate();
             session = request.getSession(true);
@@ -87,6 +80,14 @@ public class Start extends HttpServlet {
 
         //Map the board to the session
         session.setAttribute("board", board);
+        
+        //If cookies are disabled, reply with the session ID
+        try (PrintWriter out = response.getWriter()) {
+            if(!response.encodeURL("").isEmpty()) {
+                out.println(session.getId());
+            }
+            
+        }
         return true;
     }
 }

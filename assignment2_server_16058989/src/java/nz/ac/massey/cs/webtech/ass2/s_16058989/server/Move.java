@@ -48,7 +48,7 @@ public class Move extends HttpServlet {
         
         
         //Make sure the URL pattern is valid. That is, */x{0-9}y{0-9}
-        Pattern pattern = Pattern.compile("^.{0,}\\/x(\\d{1})y(\\d{1})$");
+        Pattern pattern = Pattern.compile("^.{0,}\\/x(\\d{1})y(\\d{1}).{0,}$");
         Matcher matcher = pattern.matcher(request.getRequestURI());
         
         if(matcher.find()) {

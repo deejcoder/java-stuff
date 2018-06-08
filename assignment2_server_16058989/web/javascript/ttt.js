@@ -33,6 +33,7 @@ var ttt = (function() {
            client : 'client',
            computer : 'computer'
        },
+       sessionId : null
    };
    
    
@@ -70,6 +71,10 @@ var ttt = (function() {
 
         //This funciton is invoked when there is a response from the server.
         var onData = function response(data, status) {
+            
+            if(data.length !== 0) {
+                global.sessionId = data.trim();
+            }
             global.elem.$moveControls.show();
             return updateBoard();
         };
@@ -110,6 +115,50 @@ var ttt = (function() {
         });
     }
     
+    
+
+    /*
+     * PRIVATE FUNCTIONS
+     * =========================================================================
+     */
+    /**
+     * Sends a new request to the server.
+     * @param {type} url the path to send the request
+     * @param {type} type the type of request: POST or GET
+     * @param {type} data the data to send
+     * @param {type} response the function to return the response data to.
+     * @returns {undefined}
+     */
+   function sendRequest(url, type = "POST", data = "", response = function(d, s){}) {
+       updateStatus("");
+       
+       var xhttp = new XMLHttpRequest();
+       
+       xhttp.onreadystatechange = function() {
+           if(this.status === 404) {
+               updateStatus(":( We have lost your session. Start a new game.");
+               return;
+           }
+           
+           if(this.readyState === 4) {
+               return response(this.responseText, this.status);
+           }
+           else if(this.readyState === 0) {
+               updateStatus(":( There is a network problem. We cannot connect.");
+           }
+       };
+       
+       //If cookies disabled, encode in URL
+       xhttp.open(type, 
+            (global.sessionId !== null) ? 
+            (url + ';jsessionid=' + global.sessionId) : 
+            (url), 
+        true);
+       xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+       xhttp.send(data);
+   }
+   
+
     /**
      * Checks if the game has ended, and if so, who won?
      * @returns {Boolean}
@@ -133,45 +182,17 @@ var ttt = (function() {
     }
     
     
-
-    /*
-     * PRIVATE FUNCTIONS
-     * =========================================================================
-     */
-    /**
-     * Sends a new request to the server.
-     * @param {type} url the path to send the request
-     * @param {type} type the type of request: POST or GET
-     * @param {type} data the data to send
-     * @param {type} response the function to return the response data to.
-     * @returns {undefined}
-     */
-   function sendRequest(url, type = "POST", data = "", response = function(d, s){}) {
-       updateStatus("");
-       
-       var xhttp = new XMLHttpRequest();
-       
-       xhttp.onreadystatechange = function() {
-           if(this.readyState === 4) {
-               return response(this.responseText, this.status);
-           }
-           else if(this.readyState === 0) {
-               updateStatus(":( There is a network problem. We cannot connect.")
-           }
-       };
-       
-       xhttp.open(type, url, true);
-       xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-       xhttp.send(data);
-   }
-
-   
    /**
     * Updates the client's game board with the server's version.
     * @returns {undefined}
     */
    function updateBoard() {
        sendRequest(global.url.state, "GET", "", function(data, status) {
+           if(status !== 200) {
+               updateStatus("There was a problem creating a new game.");
+               return;
+           }
+           
            isGameover();
            
            //Remove the last \n from the results, then split the data per line
@@ -220,7 +241,6 @@ var ttt = (function() {
        init: init(),
        global: global,
        createGame: createGame,
-       makeMove: makeMove,
-       isGameover: isGameover,
+       makeMove: makeMove
    };
 }());

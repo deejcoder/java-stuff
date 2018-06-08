@@ -76,7 +76,6 @@ public class Winner extends HttpServlet {
             }
 
             catch(ClassCastException ex) {
-                ex.printStackTrace();
             }
         }
     }

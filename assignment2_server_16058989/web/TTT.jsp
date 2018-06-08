@@ -39,5 +39,6 @@
             <button onclick="ttt.createGame('client');">I want to start!</button>
             <button onclick="ttt.createGame('computer');">The computer can start!</button>
         </div>
+
     </body>
 </html>
