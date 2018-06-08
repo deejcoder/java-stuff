@@ -19,12 +19,11 @@ var ttt = (function() {
      * Variables
      * =========================================================================
      */
-    /**
-     * Global variables/constants
-     */
+
    var global = {
        url : {
            move : './ttt/move/',
+           possibleMoves : './ttt/possiblemoves',
            state : './ttt/state',
            won : './ttt/won',
            ustart : './ttt/ustart',
@@ -37,8 +36,7 @@ var ttt = (function() {
    };
    
    
-   
-   
+
    /*
     * GLOBAL FUNCTIONS
     * ==========================================================================
@@ -52,13 +50,13 @@ var ttt = (function() {
        $(document).ready(function() {
            
            global.elem = {
+                $moveControls : $('#moveControls'),
                 $move_x : $('#moveControls .move_x'),
                 $move_y : $('#moveControls .move_y'),
-                $board : $('#gameBoard')
+                $board : $('#gameBoard table'),
+                $status : $('.status')
            };
        });
-           
-       
        
    }
    
@@ -70,7 +68,9 @@ var ttt = (function() {
     */
    function createGame(starter) {
 
+        //This funciton is invoked when there is a response from the server.
         var onData = function response(data, status) {
+            global.elem.$moveControls.show();
             return updateBoard();
         };
 
@@ -83,34 +83,48 @@ var ttt = (function() {
     };
     
     
+    /**
+     * Checks if the move is valid, then sends the move.
+     * @returns {undefined}
+     */
     function makeMove() {
         var x = global.elem.$move_x.val();
         var y = global.elem.$move_y.val();
         
-        var url = global.url.move + "x" + x + "y" + y;
-        
-        sendRequest(url, "POST", "", function(data, status) {
-            if(status === 400) {
-                console.log("Oh dear! Invalid move, try again.");
+        //Is the entered move a valid possible move?
+        sendRequest(global.url.possibleMoves, "GET", "", function(data, status) {
+            if(status === 200) {
+                
+                if(data.includes(x + "," + y)) {
+                    
+                    //If it is, make the move
+                    var url = global.url.move + "x" + x + "y" + y;
+                    sendRequest(url, "POST", "", function(data, status) {
+                        updateBoard();
+                    });
+                }
+                else {
+                    updateStatus("Sorry, but you cannot move here.");
+                }
             }
         });
-        
-        updateBoard();
-        isGameover();
     }
     
-    
+    /**
+     * Checks if the game has ended, and if so, who won?
+     * @returns {Boolean}
+     */
     function isGameover() {
+        
         sendRequest(global.url.won, "GET", "", function(data, status) {
             if(status === 200) {
-                console.log(data);
                 
                 switch(data.trim()) {
                     case "Player":
-                        alert("You have won!");
+                        updateStatus("Hooray! You have won!")
                         break;
                     case "Computer":
-                        alert("Oh no! You have lost!");
+                        updateStatus(":( You have lost!");
                         break;
                 }
             }
@@ -119,8 +133,7 @@ var ttt = (function() {
     }
     
     
-    
-    
+
     /*
      * PRIVATE FUNCTIONS
      * =========================================================================
@@ -134,12 +147,16 @@ var ttt = (function() {
      * @returns {undefined}
      */
    function sendRequest(url, type = "POST", data = "", response = function(d, s){}) {
+       updateStatus("");
        
        var xhttp = new XMLHttpRequest();
        
        xhttp.onreadystatechange = function() {
            if(this.readyState === 4) {
                return response(this.responseText, this.status);
+           }
+           else if(this.readyState === 0) {
+               updateStatus(":( There is a network problem. We cannot connect.")
            }
        };
        
@@ -155,10 +172,43 @@ var ttt = (function() {
     */
    function updateBoard() {
        sendRequest(global.url.state, "GET", "", function(data, status) {
-           global.elem.$board.text(data);
+           isGameover();
+           
+           //Remove the last \n from the results, then split the data per line
+           data = data.trim().split('\n');
+           
+           var newBoard = "";
+           for(var line in data) {
+               
+               //Adds a row to the board
+               newBoard += "<tr>";
+               for(var value in data[line]) {
+                   
+                   //If the position is available,
+                   if(data[line][value] === '_') {
+                       
+                       //Create a column containing the value
+                       newBoard += "<td class='available'>" + data[line][value] + "</td>";
+                   }
+                   else {
+                       newBoard += "<td>" + data[line][value] + "</td>";
+                   }
+                    
+               }
+               newBoard += "</tr>";
+           }
+           global.elem.$board.html(newBoard);
        });
    }
    
+   /**
+    * Updates the status text for the client
+    * @param {type} string the new status
+    * @returns {undefined}
+    */
+   function updateStatus(string) {
+       global.elem.$status.text(string);
+   }
    
    
    

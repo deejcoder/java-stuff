@@ -36,10 +36,9 @@ public class Start extends HttpServlet {
 
                     //TODO: possibly need to check if the session already exists,
                     if(createGame(request, Board.Player.COMPUTER)) {
-                        out.println("sucess");
                     }
                     else {
-                        out.println("game in-progress");
+                        
                     }
                     break;
                 }
@@ -73,20 +72,21 @@ public class Start extends HttpServlet {
 
         
         //TODO: add support for if client browser rejects cookies
-        if(session.isNew()) {
-            
-            //Create a new board for the client
-            Board board = new Board();
-            board.setTurn(starter);
-            
-            if(starter == Board.Player.COMPUTER) {
-                board.moveComputer();
-            }
-            
-            //Map the board to the session
-            session.setAttribute("board", board);
-            return true;
+        if(!session.isNew()) {
+            session.invalidate();
+            session = request.getSession(true);
         }
-        return false;
+            
+        //Create a new board for the client
+        Board board = new Board();
+        board.setTurn(starter);
+
+        if(starter == Board.Player.COMPUTER) {
+            board.moveComputer();
+        }
+
+        //Map the board to the session
+        session.setAttribute("board", board);
+        return true;
     }
 }

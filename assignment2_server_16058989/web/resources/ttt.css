@@ -1,0 +1,58 @@
+/* 
+    Created on : 8/06/2018, 1:50:04 PM
+    Author     : Octet
+*/
+
+/*
+Document
+*/
+body {
+    font-family:"Arial";
+}
+
+/*====*/
+/*
+Move controls
+*/
+#moveControls {
+    display:none;
+}
+
+
+/*====*/
+/*
+Game Controls
+*/
+#gameControls {
+    background-color:lightyellow;
+}
+
+#gameControls .status {
+    color:red;
+}
+
+
+/*====*/
+/*
+Game board
+*/
+#gameBoard table tr td {
+    background-color:grey;
+    font-size:22px;
+    padding: 5px;
+    font-family: "Arial";
+    width:40px;
+    height:40px;
+    text-align:center;
+}
+
+#gameBoard table tr td:hover {
+    background-color:white;
+    color:black;
+    cursor: not-allowed;
+}
+
+#gameBoard  table tr td[class=available]:hover {
+    cursor: pointer !important;
+}
+/*====*/
