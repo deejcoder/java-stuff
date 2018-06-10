@@ -25,7 +25,11 @@ public class Loader {
         List<Integer> randoms = new ArrayList<>();
         for(int n = 0; n < testing.length; n++) {
             Random randomNum = new Random();
-            randoms.add(randomNum.nextInt(max_data));
+
+            int num = -1;
+            while(randoms.contains(num) || (num < 0))
+                num = randomNum.nextInt(max_data);
+            randoms.add(num);
         }
         //Sort these random numbers in ascending order
         Collections.sort(randoms);
@@ -42,6 +46,7 @@ public class Loader {
                 break;
             }
             if(!randoms.isEmpty()) {
+
                 if (randoms.get(0) == i) {
                     randoms.remove(0);
                     testing[test] = tmp.split(",", 5);
@@ -55,4 +60,5 @@ public class Loader {
             i++;
         }
     }
+
 }

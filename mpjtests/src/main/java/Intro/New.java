@@ -7,10 +7,10 @@ import java.util.*;
 public class New {
 
     //Constants
-    private static final int MAX_TRAINING = 150;
+    private static final int MAX_TRAINING = 135;
     private static final int MAX_TESTING = 15;
     private static final int ROOT = 0;
-    private static final int k = 3;
+    private static final int MAX_NEIGH = 3;
 
     public static void main(String[] args) throws Exception {
 
@@ -61,6 +61,8 @@ public class New {
 
 
         //SCATTER the training set across all processes evenly
+        //WARNING let n = # threads, then sendSize will be some float. Not all will be sent.
+        System.out.println(sendSize);
         MPI.COMM_WORLD.Scatter(training, 0, sendSize, MPI.OBJECT, localTrain, 0, sendSize, MPI.OBJECT, ROOT);
 
 
@@ -71,6 +73,7 @@ public class New {
          */
         List<SortedMap<Double, String>> result = new ArrayList<>();
         for(String[] test : testing) {
+
 
             SortedMap<Double, String> distances = new TreeMap<>();
 
@@ -87,14 +90,17 @@ public class New {
                     );
                 }
                 catch(NumberFormatException | NullPointerException | ArrayIndexOutOfBoundsException ex) {
-
+                    ex.printStackTrace();
                 }
             }
 
             //Only take the top K for this process: minimizing what needs to be sent
             SortedMap<Double, String> top = new TreeMap<>();
+            //Put the test case at the front, just the class
+            double key = Float.parseFloat(test[0]) + Float.parseFloat(test[1]) + Float.parseFloat(test[2]) + Float.parseFloat(test[3]);
+
             for(Map.Entry<Double, String> entry : distances.entrySet()) {
-                if(top.size() >= k) break;
+                if(top.size() - 1 >= MAX_NEIGH) break;
 
                 top.put(entry.getKey(), entry.getValue());
             }
@@ -106,33 +112,43 @@ public class New {
 
         MPI.COMM_WORLD.Gather(array, 0, array.length, MPI.OBJECT, out, 0, array.length, MPI.OBJECT, ROOT);
 
+
+
         if(rank == ROOT) {
 
-            List<String> names = new ArrayList<String>();
+            List<SortedMap<Double, String>> fin = new ArrayList<>();
 
-            int i = 0;
-            for(Object o : out) {
-                if(o == null) continue;
-                SortedMap<Double, String> tmp = (SortedMap<Double,String>) o;
+            for(int i = 0; i < out.length; i++) {
+                if(out[i] == null) continue;
+                SortedMap<Double, String> tmp = (SortedMap<Double, String>) out[i];
 
-                for(int t = 0; t < size; t++) {
-                    if(out[i+MAX_TESTING] != null) {
-                        tmp.putAll((SortedMap<Double, String>) out[i + MAX_TESTING]);
-                    }
-                    out[i+MAX_TESTING] = null;
-                }
-                if(tmp != null) {
-                    if(!tmp.isEmpty()) {
-                        //System.out.println(tmp.firstKey());
-                        names.add(tmp.get(tmp.firstKey()));
+                for(int k = 0; k < out.length; k++) {
+                    if(out[k] == null || i == k) continue;
+                    SortedMap<Double, String> val = (SortedMap<Double, String>) out[k];
+                    if(val.lastKey().equals(tmp.lastKey()) && val.get(val.lastKey()).equals(tmp.get(tmp.lastKey()))) {
+                        tmp.putAll(val);
+
+                        out[k] = null;
                     }
                 }
-                i++;
+
+                SortedMap<Double, String> list = new TreeMap<>();
+                for(int k = 0; k < MAX_NEIGH; k++)
+                {
+                    list.put(tmp.firstKey(), tmp.get(tmp.firstKey()));
+                    tmp.remove(tmp.firstKey());
+                }
+                list.put(tmp.lastKey(), tmp.get(tmp.lastKey()));
+                fin.add(list);
+                out[i] = null;
+
             }
 
-            for(int j = 0; j < names.size(); j++) {
-                System.out.println(testing[j][4] + ", " + names.get(j));
+            for(SortedMap<Double, String> test : fin) {
+                System.out.println(test);
             }
+
+
             System.out.println("done");
         }
     }
