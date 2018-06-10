@@ -10,6 +10,7 @@ public class New {
     private static final int MAX_LINES = 150;
     private static final int MAX_TESTING = 15; //The number of test cases
     private static final int MAX_TRAINING = MAX_LINES - MAX_TESTING; //# of training
+    private static final int MAX_CLASSES = 3; //# of plants
 
     private static final int ROOT = 0; //The root process
     private static final int MAX_NEIGH = 3; //In the assignment doc, this is K
@@ -112,6 +113,7 @@ public class New {
             double testKey = Float.parseFloat(test[0]) + Float.parseFloat(test[1]) + Float.parseFloat(test[2]) + Float.parseFloat(test[3]);
             top.put(testKey, test[4]);
 
+
             for(Map.Entry<Double, String> entry : distances.entrySet()) {
                 if(top.size() - 1 >= MAX_NEIGH) break;
 
@@ -133,46 +135,66 @@ public class New {
 
         MPI.COMM_WORLD.Gather(array, 0, array.length, MPI.OBJECT, out, 0, array.length, MPI.OBJECT, ROOT);
 
-
-
         if(rank == ROOT) {
 
-            List<SortedMap<Double, String>> fin = new ArrayList<>();
+            /*
+                Compares one SortedMap with another, and tests if they belong to the same test case.
+                If they belong to the same, they are merged.
+                It's important to check the objects exist, since they are deleted after merge.
+             */
+            List<SortedMap<Double, String>> testResults = new ArrayList<>();
+            List<String> classes = new ArrayList<>(); //stores the 'majority'
 
             for(int i = 0; i < out.length; i++) {
                 if(out[i] == null) continue;
-                SortedMap<Double, String> tmp = (SortedMap<Double, String>) out[i];
 
-                for(int k = 0; k < out.length; k++) {
-                    if(out[k] == null || i == k) continue;
-                    SortedMap<Double, String> val = (SortedMap<Double, String>) out[k];
-                    if(val.lastKey().equals(tmp.lastKey()) && val.get(val.lastKey()).equals(tmp.get(tmp.lastKey()))) {
-                        tmp.putAll(val);
+                SortedMap<Double, String> compare1 = (SortedMap<Double, String>) out[i];
 
-                        out[k] = null;
+                for(int j = 0; j < out.length; j++) {
+                    if(out[j] == null || i == j) continue;
+
+                    SortedMap<Double, String> compare2 = (SortedMap<Double, String>) out[j];
+                    Double key1 = compare1.lastKey();
+                    Double key2 = compare2.lastKey();
+
+                    //If the last key & value is the same it is the same test case
+                    if(key1.equals(key2)) {
+                        if(compare1.get(key1).equals(compare2.get(key2))) {
+
+                            //Same memory address
+                            compare1.putAll(compare2);
+                            out[j] = null;
+                        }
                     }
                 }
 
-                SortedMap<Double, String> list = new TreeMap<>();
-                for(int k = 0; k < MAX_NEIGH; k++)
-                {
-                    list.put(tmp.firstKey(), tmp.get(tmp.firstKey()));
-                    tmp.remove(tmp.firstKey());
-                }
-                list.put(tmp.lastKey(), tmp.get(tmp.lastKey()));
-                fin.add(list);
+                testResults.add(compare1);
                 out[i] = null;
-
             }
 
-            System.out.println("TEST CASES");
-            for(String[] test : testing) {
-                double testKey =
-                        Float.parseFloat(test[0]) + Float.parseFloat(test[1]) + Float.parseFloat(test[2]) + Float.parseFloat(test[3]);
-                System.out.println(test[4] + ", " + testKey);
-            }
-            for(SortedMap<Double, String> test : fin) {
+            for(SortedMap<Double, String> test : testResults) {
                 System.out.println(test);
+            }
+
+            //Let's get the accuracy & majority...
+            int index = 0;
+            for(SortedMap<Double, String> map : testResults) {
+                HashMap<String, Integer> counts = new HashMap<>();
+                double accuracy = 0.0;
+
+                for (int k = 0; k < MAX_NEIGH; k++) {
+
+                    String testName = map.get(map.firstKey());
+                    if(counts.containsKey(testName)) {
+                        int count = counts.get(testName);
+                        counts.put(testName, count+1);
+                    }
+                    else {
+                        counts.put(testName, 1);
+                    }
+                }
+                accuracy = (counts.get(map.get(map.lastKey()))/MAX_NEIGH)*100;
+                System.out.println("Accuracy: " + accuracy + ", " + counts + " |<>| test case: " + testing[index][0] + "," + testing[index][1] + "," + testing[index][2] + "," + testing[index][3] + "," + testing[index][4]);
             }
 
         }
