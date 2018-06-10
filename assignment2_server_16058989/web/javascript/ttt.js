@@ -80,10 +80,10 @@ var ttt = (function() {
         };
 
         if(starter === global.players.client) {
-            sendRequest(global.url.istart, "POST", "", onData);
+            sendRequest(global.url.istart, "", "POST", "", onData);
         }
         else if(starter === global.players.computer) {
-            sendRequest(global.url.ustart, "POST", "", onData);
+            sendRequest(global.url.ustart, "", "POST", "", onData);
         }
     };
     
@@ -97,14 +97,14 @@ var ttt = (function() {
         var y = global.elem.$move_y.val();
         
         //Is the entered move a valid possible move?
-        sendRequest(global.url.possibleMoves, "GET", "", function(data, status) {
+        sendRequest(global.url.possibleMoves, "", "GET", "", function(data, status) {
             if(status === 200) {
                 
                 if(data.includes(x + "," + y)) {
                     
                     //If it is, make the move
                     var url = global.url.move + "x" + x + "y" + y;
-                    sendRequest(url, "POST", "", function(data, status) {
+                    sendRequest(url, "", "POST", "", function(data, status) {
                         updateBoard();
                     });
                 }
@@ -129,7 +129,7 @@ var ttt = (function() {
      * @param {type} response the function to return the response data to.
      * @returns {undefined}
      */
-   function sendRequest(url, type = "POST", data = "", response = function(d, s){}) {
+   function sendRequest(url, params, type = "POST", data = "", response = function(d, s){}) {
        updateStatus("");
        
        var xhttp = new XMLHttpRequest();
@@ -151,8 +151,8 @@ var ttt = (function() {
        //If cookies disabled, encode in URL
        xhttp.open(type, 
             (global.sessionId !== null) ? 
-            (url + ';jsessionid=' + global.sessionId) : 
-            (url), 
+            (url + ';jsessionid=' + global.sessionId + params) : 
+            (url + params), 
         true);
        xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
        xhttp.send(data);
@@ -165,7 +165,7 @@ var ttt = (function() {
      */
     function isGameover() {
         
-        sendRequest(global.url.won, "GET", "", function(data, status) {
+        sendRequest(global.url.won, "", "GET", "", function(data, status) {
             if(status === 200) {
                 
                 switch(data.trim()) {
@@ -187,13 +187,13 @@ var ttt = (function() {
     * @returns {undefined}
     */
    function updateBoard() {
-       sendRequest(global.url.state, "GET", "", function(data, status) {
+       sendRequest(global.url.state, "?format=txt", "GET", "", function(data, status) {
            if(status !== 200) {
                updateStatus("There was a problem creating a new game.");
                return;
            }
            
-           isGameover();
+           
            
            //Remove the last \n from the results, then split the data per line
            data = data.trim().split('\n');
@@ -219,6 +219,7 @@ var ttt = (function() {
                newBoard += "</tr>";
            }
            global.elem.$board.html(newBoard);
+           isGameover();
        });
    }
    

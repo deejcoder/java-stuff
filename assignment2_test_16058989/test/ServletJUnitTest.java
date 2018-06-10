@@ -111,7 +111,7 @@ public class ServletJUnitTest {
     public void state() throws IOException {
         System.out.println("=>> Executing STATE test");
         
-        HttpGet request = new HttpGet(SERVER_URL + "ttt/state");
+        HttpGet request = new HttpGet(SERVER_URL + "ttt/state?format=txt");
         HttpResponse response = http.execute(request);
         
         assertTrue(response.getStatusLine().getStatusCode() == 200);

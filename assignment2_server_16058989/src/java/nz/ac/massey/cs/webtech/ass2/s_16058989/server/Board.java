@@ -5,9 +5,17 @@
  */
 package nz.ac.massey.cs.webtech.ass2.s_16058989.server;
 
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.FontMetrics;
+import java.awt.Graphics2D;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  *
@@ -121,6 +129,38 @@ public class Board {
     }
     
     /**
+     * Returns a PNG image of the game board
+     * @param png
+     * @param out
+     * @param response
+     * @return
+     * @throws IOException 
+     */
+    public String display(boolean png, ServletOutputStream out, HttpServletResponse response) throws IOException {
+        response.setContentType("image/png");
+
+        String text = display();
+        
+        BufferedImage image = new BufferedImage(50, 100, BufferedImage.TYPE_INT_RGB);
+        Graphics2D g2d = image.createGraphics();
+        Font font = new Font("Arial", Font.PLAIN, 20);
+        g2d.setFont(font);
+        g2d.setColor(Color.WHITE);
+        String[] lines = text.split("\n");
+        int count = 1;
+        for(String line : lines) {
+            g2d.drawString(line, 0, count*25);
+            count++;
+        }
+        
+        g2d.dispose();
+        
+        javax.imageio.ImageIO.write(image, "png", out);
+        return "";
+    }
+    
+    
+    /**
      * Allows a player to move, given x & y values.
      * @param x
      * @param y
@@ -177,6 +217,7 @@ public class Board {
         //Update the board
         board[vector.x][vector.y] = Player.COMPUTER;
         turn = Player.CLIENT;
+        checkWinner(); //has computer won?
         return true;
         
     }
