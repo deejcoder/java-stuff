@@ -52,6 +52,11 @@ public class Winner extends HttpServlet {
                 
                 //Will throw ClassCastException if cannot be casted to a Board
                 board = (Board) session.getAttribute("board");
+                if(board == null) {
+                    response.setStatus(HttpServletResponse.SC_NOT_FOUND);
+                    return;
+                }
+                response.setStatus(HttpServletResponse.SC_OK);
                 
                 //Who won?
                 switch(board.getWinner()) {

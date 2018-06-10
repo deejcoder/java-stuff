@@ -45,6 +45,10 @@ public class Move extends HttpServlet {
         
         //Get the client's board
         Board board = (Board) session.getAttribute("board");
+        if(board == null) {
+            response.sendError(HttpServletResponse.SC_NOT_FOUND);
+            return;
+        }
         
         
         //Make sure the URL pattern is valid. That is, */x{0-9}y{0-9}
@@ -58,12 +62,13 @@ public class Move extends HttpServlet {
             
             if(board.movePlayer(x, y)) {
                 board.moveComputer();
+                response.setStatus(HttpServletResponse.SC_OK);
                 return;
             }
 
         }
         //Invalid request or bad move
-        response.sendError(HttpServletResponse.SC_BAD_REQUEST);
+        response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
 
     }
 

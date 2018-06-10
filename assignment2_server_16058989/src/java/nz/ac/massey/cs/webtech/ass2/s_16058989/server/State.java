@@ -42,6 +42,11 @@ public class State extends HttpServlet {
         }
         
         Board board = (Board) session.getAttribute("board");
+        if(board == null) {
+            response.sendError(HttpServletResponse.SC_NOT_FOUND);
+            return;
+        }
+        
         try (PrintWriter out = response.getWriter()) {
             out.println(board.display());
         }

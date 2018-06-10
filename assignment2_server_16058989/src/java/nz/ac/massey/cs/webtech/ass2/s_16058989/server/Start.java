@@ -43,6 +43,7 @@ public class Start extends HttpServlet {
                 response.sendError(HttpServletResponse.SC_BAD_REQUEST); 
                 return;
         }
+        response.setStatus(HttpServletResponse.SC_OK);
 
     }
     /*
