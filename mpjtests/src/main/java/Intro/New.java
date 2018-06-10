@@ -65,6 +65,7 @@ public class New {
         System.out.println(sendSize);
         MPI.COMM_WORLD.Scatter(training, 0, sendSize, MPI.OBJECT, localTrain, 0, sendSize, MPI.OBJECT, ROOT);
 
+        long start = System.currentTimeMillis();
 
         /*
             Now, for every test case,
@@ -98,7 +99,7 @@ public class New {
             SortedMap<Double, String> top = new TreeMap<>();
             //Put the test case at the front, just the class
             double key = Float.parseFloat(test[0]) + Float.parseFloat(test[1]) + Float.parseFloat(test[2]) + Float.parseFloat(test[3]);
-
+            top.put(key, test[4]);
             for(Map.Entry<Double, String> entry : distances.entrySet()) {
                 if(top.size() - 1 >= MAX_NEIGH) break;
 
@@ -110,12 +111,15 @@ public class New {
 
         Object[] array = result.toArray();
 
+        long end = System.currentTimeMillis();
+        System.out.println(end-start);
         MPI.COMM_WORLD.Gather(array, 0, array.length, MPI.OBJECT, out, 0, array.length, MPI.OBJECT, ROOT);
 
 
 
         if(rank == ROOT) {
 
+            start = System.currentTimeMillis();
             List<SortedMap<Double, String>> fin = new ArrayList<>();
 
             for(int i = 0; i < out.length; i++) {
@@ -149,6 +153,8 @@ public class New {
             }
 
 
+            end = System.currentTimeMillis();
+            System.out.println(end-start);
             System.out.println("done");
         }
     }
