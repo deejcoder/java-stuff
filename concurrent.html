@@ -1,0 +1,293 @@
+<html>
+<head>
+  <title>Evernote Export</title>
+  <basefont face="Segoe UI" size="2" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="exporter-version" content="Evernote Windows/307027 (en-US, DDL); Windows/10.0.0 (Win64);"/>
+  <style>
+    body, td {
+      font-family: Segoe UI;
+      font-size: 10pt;
+    }
+  </style>
+</head>
+<body>
+<a name="916"/>
+<h1>1. Operating Systems</h1>
+<div>
+<table bgcolor="#D4DDE5" border="0">
+<tr><td><b>Created:</b></td><td><i>17/06/2018 6:41 PM</i></td></tr>
+<tr><td><b>Updated:</b></td><td><i>18/06/2018 10:08 AM</i></td></tr>
+</table>
+</div>
+<br/>
+
+<div>
+<span><div><div><span style="font-weight: bold; font-size: 12pt;">Threads v Processes</span></div><div><hr/></div><div>There is a lot of overhead in creating a new process. Rather than creating a process, which inherit similar features to its parent process, a thread is more efficient. Processes are ideal when they perform a lot differently from their parent process.</div><div><br/></div><div>A process contains a set of threads, or just a single thread. Threads run in parallel when there is more than one core. This is called multiprocessor architecture. Each core is considered a separate processor.</div><div><br/></div><div><img src="concurrent_files/Image.png" type="image/png" data-filename="Image.png" width="311"/><img src="concurrent_files/Image [1].png" type="image/png" data-filename="Image.png" width="247"/></div><div><br/></div><div>Each process is represented by a <span style="font-weight: bold;">Process Control Block</span>, by the OS. It contains,</div><ul><li><div>The state of the process</div></li><li><div>Current situation (running, waiting...)</div></li><li><div>Pointer to its memory location.</div></li><li><div>Links to other <span style="font-style: italic;">PCBs</span> to form a queue.</div></li></ul><div><br/></div><div><span style="font-weight: bold;">Spawning processes</span></div><div>Nested process: has a parent.</div><div>Flat: at the same level as the <span style="font-style: italic;">spawnee</span>.</div><div><br/></div><div><span style="font-weight: bold;">When creating a thread,</span></div><div>It allocates memory, initializes a new thread in JVM and invokes the run() method.</div><div><br/></div><div><span style="font-weight: bold; font-size: 12pt;">Concurrency</span></div><div><hr/></div><div>Two <span style="font-weight: bold;">types</span> of concurrency:</div><ul><li><div>Inherently: real time, activities that can happen simultaneously.</div></li><li><div>Potentially: possible to parallelise, massive computations.</div></li></ul><div><br/></div><div><b>Flynn's types of concurrency</b></div><div>Single Instruction, Single Data Stream (SISD)</div><div>Single Instruction, Multiple Data Streams (SIMD, ideally GPUs)</div><div>Multiple Instructions, Single Data Streams (MISD, rarely used)</div><div>Multiple Instructions, Multiple Data Streams (MIMD, most flexible)</div><div><br/></div><div><span style="font-weight: bold;">Embedded Systems</span>: small dedicated processors, all communicate with main controller, work in real time.</div><div><br/></div><div><span style="font-weight: bold;">Context-switch</span>: switching between processes, saving states between them and then going back to the waiting process.</div><div><br/></div><div>An <span style="font-weight: bold;">atomic action</span> is a single instruction that cannot be interrupted.</div><div><br/></div><div><span style="font-weight: bold;">A program is deterministic</span> if there is only one path, that is the same output at all times. For concurrent systems, threads can execute at different times thus changing the output.</div><div><br/></div><div><span style="font-weight: bold; font-style: italic;">Concurrency is different from parallelism.</span></div><div><span style="font-style: italic;">Concurrency refers to performing two tasks at the same time. But, one can be paused while another one is being worked on. Parallelism refers to performing tasks in simultaneously.</span></div><div><br/></div><div><br/></div><div><span style="font-weight: bold; font-size: 12pt;">The Life-cycle</span></div><div><hr/></div><div><img src="concurrent_files/Image [2].png" type="image/png" data-filename="Image.png" width="252"/></div><div>New: initializes a new object, for a thread, but does not start. It then becomes, runnable.</div><div>The thread is not started until start() is invoked.</div><div>The thread dies, when it is interrupted or the run method terminates.</div><div><br/></div><div><br/></div><div><span style="font-weight: bold; font-size: 12pt;">Process Scheduling</span></div><div><hr/></div><div>Refers to the operating system, or JVM deciding what process (thread) to run next. Goal is to give every thread a fair share, minimize the time of running each process, use the processor as efficiently as possible. The <span style="font-weight: bold;">run-time support system</span> takes this job. JVM doesn't have this, OS manages it. Default = unfair.</div><div><br/></div><ul><li><div>Giving every process an equal time slice, but increasing context switches (fair).</div></li><li><div>Or, in sequence (unfair).</div></li></ul><div><br/></div><div><br/></div><div><span style="font-weight: bold; font-size: 12pt;">Timing</span></div><div><hr/></div><div>sleep(milli), a thread is then runnable again but doesn't start running immediately. yield() puts the running process back into ready queue.</div><div><br/></div><div><br/></div></div><div><br/></div></span>
+</div>
+<hr>
+<a name="928"/>
+<h1>2. Thread Interaction (v2)</h1>
+<div>
+<table bgcolor="#D4DDE5" border="0">
+<tr><td><b>Created:</b></td><td><i>17/06/2018 10:30 PM</i></td></tr>
+<tr><td><b>Updated:</b></td><td><i>18/06/2018 9:41 AM</i></td></tr>
+</table>
+</div>
+<br/>
+
+<div>
+<span><div><div>Questions:</div><ul><li><div>What is condition synchronization?</div></li></ul><div><br/></div><div><b><font style="font-size: 12pt;">Definitions</font></b></div><div><hr/></div><div><i>Throughput</i>: keep completing processes.</div><div><i>Turnaround</i>: Execute processes quickly.</div><div><b><font style="font-size: 12pt;"><br/></font></b></div><div><b><font style="font-size: 12pt;">Threads</font></b></div><div><hr/></div><div>Provides less cost towards context switching.</div><div>Threads share memory &amp; resources of spawning process (shared-memory).</div><div>OS handles process scheduling</div><div><img src="concurrent_files/Image [3].png" type="image/png" data-filename="Image.png" width="288"/></div><div><b>Job scheduler:</b> keeps a good mix of job types, so everything is busy. Monitors queue of incoming jobs, checks I/O requirements, amount of computation. Selects ONE for <i>process queue</i>.</div><div><b><br/></b></div><div><b>Process scheduler:</b> monitors ready <i>process queue</i>. Chooses next job, and decides on time slice. Follows <i>scheduling policy</i>.</div><div><br/></div><div><br/></div><div><b><font style="font-size: 12pt;">Process Control Blocks (PCB)</font></b></div><div><hr/></div><div><img src="concurrent_files/Image [4].png" type="image/png" data-filename="Image.png" width="147"/><img src="concurrent_files/Image [5].png" type="image/png" data-filename="Image.png" width="270"/></div><div>Left: PCB, right: context switch algorithm.</div><div><br/></div><div><b><br/></b></div><div><b><font style="font-size: 12pt;">Scheduling Policies</font></b></div><div><hr/></div><ol><li><div>First in, first out (FIFO or FCFS: first come first serve)...a time consuming job can clog.</div></li><li><div>Shortest Job First... process must give this information.</div></li><li><div>Priority scheduling... assign numbers to processes. Introduces starvation.</div></li><li><div>Round Robin: time slices (context-switching). Good for multiple users.</div></li><li><div>Shortest remaining time (SRT).</div></li><li><div>Multiple level queues (combination) -- see diagram.</div></li></ol><div><img src="concurrent_files/Image [6].png" type="image/png" data-filename="Image.png" width="141"/></div><div><br/></div><div><b>Fair</b> means that every eligible instruction will eventually be chosen (e.g random, FIFO).</div><div><img src="concurrent_files/Image [7].png" type="image/png" data-filename="Image.png" width="480"/></div><div><br/></div><div><br/></div><div><b><font style="font-size: 12pt;">Thread Interference</font></b></div><div><hr/></div><div>Each thread has its own register. This contains a version of something stored in shared memory. However, when multiple threads update the memory location in shared memory at the same time, the versions differ and are overwritten, or corrupted.</div><div><br/></div><div><br/></div><div><b><font style="font-size: 12pt;">Problems</font></b></div><div><hr/></div><div><b><i>LIVELOCK</i></b>: busy-wait, <b><i>DEADLOCK</i></b>: blocked-waiting (sleeping).</div><div><img src="concurrent_files/Image [8].png" type="image/png" data-filename="Image.png" width="283"/></div><div><br/></div><div><br/></div><div><b>Detecting &amp; Preventing Deadlock</b></div><div><hr/></div><div>The OS -- detects &amp; tells the user it has happened, letting them sort it out. Or, avoids -- overcome it; take avoiding action. Prevent by insisting it is logically impossible.</div><div><br/></div><div><b>Detection</b></div><div>Graphs: look for cycles.</div><div>The OS can respond by aborting all threads, abort threads one at a time, or pre-empt resources one at a time.</div><div><br/></div><div>Threads chosen for termination can be: random, by priority, length of operation or number &amp; nature of resources required.</div><div><br/></div><div><b>Avoidance</b></div><div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">The Banker's Algorithm</span>: threads state their maximum resource claim when they first request resources.</div><div><br/></div><div>Each time, resources are requested, they are only allocated if:</div><ul><li><div>The thread didn't ask for more than its max.</div></li><li><div>If the request was granted, the program could still complete if all the threads asked for their full claim.</div></li></ul><div><br/></div><div><br/></div><div><img src="concurrent_files/Image [9].png" type="image/png" data-filename="Image.png" width="342"/></div><div><br/></div></div></span>
+</div>
+<hr>
+<a name="862"/>
+<h1>2. Concurrent Programming Correctness (NOTES)</h1>
+<div>
+<table bgcolor="#D4DDE5" border="0">
+<tr><td><b>Created:</b></td><td><i>15/06/2018 5:44 PM</i></td></tr>
+<tr><td><b>Updated:</b></td><td><i>17/06/2018 10:27 PM</i></td></tr>
+</table>
+</div>
+<br/>
+
+<div>
+<span><div><div><span style="font-weight: bold; font-size: 12pt;">Concurrent Programming Correctness</span></div><div><hr/></div><div><span style="font-style: italic;">Safety</span>: Synchronization &amp; mutual exclusion should be enforced, to avoid <span style="font-style: italic;">race conditions</span>.</div><div><span style="font-style: italic;">Liveness</span>: Terminating before finishing. Caused either by livelock, deadlock or starvation. For example, if a thread dies, the other threads shouldn't too, or lock.</div><div><br/></div><div><span style="font-style: italic;">Race condition</span>: when thread A races, and always wins over thread B. Removing the race condition := condition synchronization.</div><div><span style="font-style: italic;">Deadlock</span>: When all threads are locked waiting for some condition.</div><div><span style="font-style: italic;">Livelock</span>: threads are still running, but no useful work is being done by the threads.</div><div><br/></div><div><span style="font-weight: bold;">Examples introduced to...</span></div><ol><li><div><img src="concurrent_files/Image [10].png" type="image/png" data-filename="Image.png" width="248"/></div></li></ol><div>Mutual exclusion isn't enforced above. Lock B corresponds to Thread B, and therefore Thread A will be blocked until the lock on Thread B has been released. However, Thread B can still enter the critical section while Thread A unblocks. Therefore, thread A should tell thread B it is waiting to access the critical section, then thread B will lock as soon as it exits the critical section. Below, mutual exclusion is enforced.</div><ol start="2"><li><div><img src="concurrent_files/Image [11].png" type="image/png" data-filename="Image.png" width="230"/></div></li></ol><div>However, what if: lockA = true &amp;&amp; lockB = true, then both threads busy wait. <span style="font-style: italic;">Livelock</span>.</div><div><br/></div><div><img src="concurrent_files/Image [12].png" type="image/png" data-filename="Image.png"/></div><ol><li><div>(0,0), (1,0) and (0,1) are possible. (1,1) is possible too, but disregarded since has no effect on locking.</div></li><li><div>(1,0), (0,1), (1,1) are possible. (0,0) is impossible.</div></li></ol><div><br/></div><div><span style="font-weight: bold;">Peterson's Algorithm</span> overcomes (1,1) in <span style="font-weight: bold;">2.</span> assuring that both locks aren't set to true. <span style="font-weight: bold;">Dekker</span> came up with a similar algorithm although is less efficient.</div><div><br/></div><div><img src="concurrent_files/Image [13].png" type="image/png" data-filename="Image.png" width="390"/></div><div>Turn identifies that it is currently thread A's turn, and if both locks are enabled, turn blocks the other thread entering. This removes (1,1).</div><div><br/></div><div><span style="font-weight: bold; font-size: 12pt;">Bakery Algorithm (correctness for n threads)</span></div><div><hr/></div><div><br/></div><div><br/></div><div><br/></div><div><br/></div><div><br/></div><div><br/></div><div><span style="font-weight: bold; font-size: 12pt;">Questions</span></div><div><hr/></div><ol><li><div>The difference between livelock &amp; deadlock.</div></li></ol><div><br/></div><div><br/></div><div><br/></div><div><br/></div><div><br/></div><div><br/></div><div><br/></div><div><br/></div><div><br/></div></div></span>
+</div>
+<hr>
+<a name="900"/>
+<h1>3. Synchronisation</h1>
+<div>
+<table bgcolor="#D4DDE5" border="0">
+<tr><td><b>Created:</b></td><td><i>16/06/2018 6:02 PM</i></td></tr>
+<tr><td><b>Updated:</b></td><td><i>17/06/2018 10:28 PM</i></td></tr>
+</table>
+</div>
+<br/>
+
+<div>
+<span><div><b><font style="font-size: 10pt;">Ultimate goal: to reduce time in critical sections. By all means, only access it if absolutely required, and only perform what is absolutely required.</font></b></div><div><b><font style="font-size: 12pt;"><br/></font></b></div><div><b><font style="font-size: 12pt;">Implicit Locks</font></b></div><div><hr/></div><div><i>Synchronisation is a mutex (mutually exclusive) lock.</i> <b>This lock is per Java object.</b><br/></div><div>The JVM manages synchronization, therefore there is more information in thread dumps: making debugging easier.</div><div><br/></div><div><i><br/></i></div><div><b>Method</b></div><div><hr/></div><div>public synchronized void function() { ... } which contains some critical section. A thread must grasp onto the object's lock. When synchronising a static method, the class object is used instead. Otherwise the object which called the method, is used.</div><div><br/></div><div>public synchronized void run(), means threads will have to wait until the thread terminates. The length of time that a lock is held, is called its <b>scope</b>.</div><div><br/></div><div><b>Block</b></div><div><hr/></div><div>Mainly used to reduce the scope. Since sometimes, an entire synchronized method isn't required for a single thread: since it includes steps that are irrelevant. <b><i>this</i></b>, is the same object as in method level.</div><div><img src="concurrent_files/Image [14].png" type="image/png" data-filename="Image.png" width="288"/></div><div><br/></div><div><b><font style="font-size: 12pt;">Explicit Locks</font></b></div><div><hr/></div><div>Includes ReentrantLock, read &amp; write locks.</div><div><img src="concurrent_files/Image [15].png" type="image/png" data-filename="Image.png" width="348"/></div><div>The <b>try...finally</b> construct assures that if the method dies, the lock is always unlocked.</div><div>tryLock() will try obtain the lock, possible to then do other things if the lock is not obtainable.</div><div><i>ReentrantLock is similar to a semaphore. Locks are not unlocked, until the counter is zero</i>, allowing nested locks?</div><div><br/></div><div><b>Read/Write</b></div><div><img src="concurrent_files/Image [16].png" type="image/png" data-filename="Image.png" style="font-weight: bold;" width="566"/></div><div><br/></div></span>
+</div>
+<hr>
+<a name="908"/>
+<h1>4. Semaphores &amp; Monitors</h1>
+<div>
+<table bgcolor="#D4DDE5" border="0">
+<tr><td><b>Created:</b></td><td><i>16/06/2018 7:10 PM</i></td></tr>
+<tr><td><b>Updated:</b></td><td><i>17/06/2018 10:28 PM</i></td></tr>
+</table>
+</div>
+<br/>
+
+<div>
+<span><div><b><font style="font-size: 12pt;">Semaphores</font></b></div><div><hr/></div><div>Access control (e.g limited resources).<br/></div><div><br/></div><div>S.acquire() requests a 'ticket', and if it exceeds the maximum number, it waits till it is able to get a ticket.</div><div>S.release() frees another ticket, and makes it available. It also checks if any are waiting for a ticket, and gives it to one of them.</div><div><br/></div><div>A <i>binary semaphore</i> (max ticket size = 1), is equal to a mutex lock. A <i>counting semaphore</i> := max ticket size &gt; 1.</div><div>A thread can take many tickets.</div><div><br/></div><div>Getting order of release() wrong can lead to deadlock, acquire() : not so much.</div><div><br/></div><div><b>Atomic Classes</b></div><div>Semaphores make use of atomic integers. Atomic classes are used when only simple interactions are needed on a variable (as the critical section). This reduces the size of critical sections. However, in cases there can be overhead when continuously requesting locks. COMPARE &amp; SWAP is faster than synchronized blocks or locks.</div><div><br/></div><div><img src="concurrent_files/Image [17].png" type="image/png" data-filename="Image.png" width="391"/></div><div><br/></div><div>Need to loop, in the event a thread is awakened.</div><div><br/></div><div><br/></div><div><b><font style="font-size: 12pt;">Monitors</font></b></div><div><hr/></div><div>Condition variables (event variables[Windows]) := access control.</div><div>Monitors are mutex. A thread wait()s, until a condition exists and then it is notify[ied]().</div><div>Built into the Object class.</div><div><br/></div><div>The current thread may not own the monitor, hence race conditions possible and there it must be encapsulated by a synchronized block.</div><div><br/></div><div>If sleep() is used instead of wait(), other threads cannot access the lock since sleep() doesn't know anything about locks, so it cannot free the lock.</div><div><br/></div><div>Conditions should be enclosed by an infinite loop, in the event the thread is accidentally woken up, or the condition changes very quickly.</div><div><br/></div><div>More efficient in circumstances that threads are waiting for extended periods, keeping threads off the CPU.</div><div><br/></div><div><br/></div><div><br/></div></span>
+</div>
+<hr>
+<a name="609"/>
+<h1>Map-Reduce</h1>
+<div>
+<table bgcolor="#D4DDE5" border="0">
+<tr><td><b>Created:</b></td><td><i>22/05/2018 6:09 PM</i></td></tr>
+<tr><td><b>Updated:</b></td><td><i>18/06/2018 12:00 PM</i></td></tr>
+</table>
+</div>
+<br/>
+
+<div>
+<span><div><div><div><i>Hadoop</i> is Apache's implementation. Map-Reduce is an abstraction layer on top of MPI.</div><div><br/></div><div><span style="font-weight: bold;"><br/></span></div><div><span style="font-weight: bold;">Map</span></div><ul><li><div>Extract something you care about from each record.</div></li><li><div>Shuffle and sort.</div></li></ul><div><span style="font-weight: bold;">Reduce</span></div><ul><li><div>Aggregate, summarize, filter or transform.</div></li><li><div>Write the results.</div></li></ul><div><img src="concurrent_files/Image [18].png" type="image/png" data-filename="Image.png"/></div><div>For example, this can be used to calculate the frequency of words in some array (shown above).</div><div><br/></div><div>MapReduce can be scaled to clusters of servers to speed up the computation, with easy configuration.</div><div><br/></div><div><img src="concurrent_files/Image [19].png" type="image/png" data-filename="Image.png"/></div><div><br/></div></div><div>As mapped data is inbound over the network, they are <i>inserted</i>.</div><div><br/></div><div><b>What is the purpose of mapping?</b></div><ul><li><div>To transform input records (key, pair) into intermediate records (key, pair).</div></li><li><div>Similar to putting them into a HashMap.</div></li><li><div>Often 10-100 maps per-node.</div></li></ul><div><br/></div><div><img src="concurrent_files/Image [20].png" type="image/png" data-filename="Image.png"/></div><div><br/></div><div><b>What is the purpose of reducing?</b></div><ul><li><div>Includes: Shuffling, sorting, reducing</div></li><li><div>What happens if the keys are the same, what should the system do? Keys are grouped automatically, before they reach the reduce method. <img src="concurrent_files/Image [21].png" type="image/png" data-filename="Image.png" width="64"/></div></li></ul><div><img src="concurrent_files/Image [22].png" type="image/png" data-filename="Image.png"/></div><div><br/></div><div><b>Initializing a job</b></div><div><img src="concurrent_files/Image [23].png" type="image/png" data-filename="Image.png" style="font-weight: bold;"/></div><div><br/></div><div><b>Building</b></div><div><img src="concurrent_files/Image [24].png" type="image/png" data-filename="Image.png" style="font-weight: bold;" width="400"/></div><div><b>Running</b></div><div><img src="concurrent_files/Image [25].png" type="image/png" data-filename="Image.png" style="font-weight: bold;" width="332"/></div><div><br/></div></div></span>
+</div>
+<hr>
+<a name="668"/>
+<h1>OpenCL</h1>
+<div>
+<table bgcolor="#D4DDE5" border="0">
+<tr><td><b>Created:</b></td><td><i>31/05/2018 10:43 AM</i></td></tr>
+<tr><td><b>Updated:</b></td><td><i>18/06/2018 12:39 PM</i></td></tr>
+</table>
+</div>
+<br/>
+
+<div>
+<span><div><div><span style="font-weight: bold;">Open Computing Language</span></div><div><span style="font-weight: bold;">Introduction</span></div><ul><li><div>It is a framework that allows you to write programs that execute across heterogeneous platforms. </div></li><li><div>It provides a standard interface for parallel computing using task-based &amp; data-based parallelism.</div></li><li><div>OpenCL can communicate with a large range of devices.</div></li></ul><div><br/></div><div><br/></div><div><span style="font-weight: bold;">Let the Host be</span> the desktop system.</div><div><span style="font-weight: bold;">Let the Compute Device be:</span> CPU or GPU</div><div><br/></div><div>Generally good for LOTS of data.</div><div><span style="font-weight: bold;">Use cases -- when to use GPU for computation</span></div><ul><li><div>When devices move memory faster than host.</div></li><li><div>Changing from one data format to another.</div></li><li><div>Devices calculator faster than the Host, big chunks of data. That is, more computation, using the ALU.</div></li></ul><div><br/></div><div><img src="concurrent_files/Image [26].png" type="image/png" data-filename="Image.png"/></div><div><br/></div></div><div>Double precision maths is slower on a GPU, by <span style="font-style: italic;">2x</span>. It's because it requires more data, it doubles the amount of required data.</div><div><br/></div><div><br/></div><div><span style="font-weight: bold;">WHEN TO USE GPU</span></div><div>GPUs have less computation power per thread. While it has more threads it is able to provide better parallelism. It has on-board memory making it ideal f or large data sets. GPUs are often quick, since they do render screens in real time, just like how one would speak through the microphone, and someone over the network would almost receive that in real time. CPUs are more ideal for lower amount of threads, or for tasks which are computationally heavy.</div><div><br/></div><div><br/></div></span>
+</div>
+<hr>
+<a name="511"/>
+<h1>Thread Interaction (Bakery, Mutual Exclusion)</h1>
+<div>
+<table bgcolor="#D4DDE5" border="0">
+<tr><td><b>Created:</b></td><td><i>29/04/2018 1:42 PM</i></td></tr>
+<tr><td><b>Updated:</b></td><td><i>29/04/2018 2:01 PM</i></td></tr>
+</table>
+</div>
+<br/>
+
+<div>
+<span><div><div><span style="font-weight: bold;">Week 3: Thread Interaction</span></div><div>Two properties in concurrent programs that need to be correct:</div><ol><li><div>Safety: means that synchronization &amp; mutual exclusion are enforced.</div></li><li><div>Liveliness: should not die before it is meant to. Live-lock, deadlock and starvation shouldn't be enforced.</div></li></ol><div><br/></div><div><span style="font-weight: bold;">Mutual Exclusion:</span> One thread should be in a critical section at a time.</div><div>Four methods introduced in lectures.</div><div><span style="font-weight: bold;">Spinlocks</span></div><div style="box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.15);-en-codeblock:true;"><div>global boolean lock</div><div>thread A {</div><div>   while(lock)</div><div>   //--/ Critical Section</div><div>}</div><div>thread B {</div><div>   lock = true;</div><div>   //--/ Critical section</div><div>   lock = false;</div><div>}</div></div><ul><li><div>A thread may still be executing the critical section before it is locked.</div></li><li><div>Busy-waits: the thread stays on the professor in an infinite loop.</div></li></ul><div><br/></div><div><br/></div><div>In addition to mutual exclusion, assure:</div><ul><li><div>Each thread must eventually be able to enter the critical section.</div></li><li><div>Any thread may halt in any noncritical section.</div></li></ul><div><br/></div><div><span style="font-weight: bold;">Bakery Algorithm</span></div><div><br/></div><div><img src="concurrent_files/BAKERYALG_15_03.png" type="image/png" data-filename="BAKERYALG_15_03.png"/></div><div><br/></div><div><span style="font-weight: bold;">Additional keywords:</span></div><div><span style="font-weight: bold;">Race condition:</span> When a thread always wins the race to the critical section.</div><div><span style="font-weight: bold;">Starvation:</span> When a thread waits for access to a critical section but never gets it.</div><div><span style="font-weight: bold;">Deadlock:</span> All threads are blocked waiting for something that'll never happen.</div><div><span style="font-weight: bold;">Live-lock:</span> When both threads are running, but are stuck in loops waiting for x condition.</div></div></span>
+</div>
+<hr>
+<a name="525"/>
+<h1>Reentrant Locks</h1>
+<div>
+<table bgcolor="#D4DDE5" border="0">
+<tr><td><b>Created:</b></td><td><i>29/04/2018 2:49 PM</i></td></tr>
+<tr><td><b>Updated:</b></td><td><i>29/04/2018 2:57 PM</i></td></tr>
+</table>
+</div>
+<br/>
+
+<div>
+<span><div><b>Reentrant Locks</b></div><div style="box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.15);-en-codeblock:true;"><div>Lock lock = new ReentrantLock();</div><div>lock.lock();</div><div>try {</div><div>    //../ Critical section</div><div>}</div><div>finally {</div><div>    lock.unlock();</div><div>}</div></div><div><span><br/></span></div><div>For <b>fair (FIFO: first in first out)</b>, that is: give threads access in the order that they request it,</div><div style="box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.15);-en-codeblock:true;"><div>new ReetrantLock(true);</div></div><div><br/></div><div>Fairness rarely required, since JVM guarantees that threads will not be starved.</div><div><br/></div><div><b>Reentrant Read/Write Locks</b></div><div>Allows multiple simultaneous readers. However, writing must be mutually exclusive.</div><div><br/></div><div><b>ReentrantReadWriteLock</b> has two locks:</div><div><b>readLock:</b> used to avoid anyone writing.</div><div><b>writeLock:</b> prevents any other access.</div></span>
+</div>
+<hr>
+<a name="517"/>
+<h1>Synchronization</h1>
+<div>
+<table bgcolor="#D4DDE5" border="0">
+<tr><td><b>Created:</b></td><td><i>29/04/2018 2:07 PM</i></td></tr>
+<tr><td><b>Updated:</b></td><td><i>29/04/2018 3:10 PM</i></td></tr>
+</table>
+</div>
+<br/>
+
+<div>
+<span><div><div><b>Synchronization</b></div><div>Is a mutex (mutually exclusive) lock. It permits only one thread in its critical section. Focuses on the <i>object</i>, rather than the thread itself.</div><div>Synchronization solves the following issues:</div><div><br/></div><ul><li><div><b>Thread interference:</b> when there are two operations running in different threads but acting on the same data, interleave. For example, two threads write to the variable <i>a</i> at the same time: they both have their own version of <i>a</i>, and only one wins. Likewise with reading, may read at same time of read: but what'll the variable contain at that time?<br/></div></li></ul><div><br/></div><ul><li><div><b>Memory consistency:</b> No guarantee of variables between threads, of the actual value.</div></li></ul><div><br/></div><div><b>Happens-Before Relationship:</b> when a thread exits a synchronized block, it updates the modified variables so all threads have the same version.</div><div><b><br/></b></div><div><b>Two methods of implementing synchronization:</b></div><div><i>Method level:</i></div><div style="box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.15);-en-codeblock:true;"><div>synchronized void function() {</div><div>    //../ critical section</div><div>}</div></div><div><span><i>Block level:</i></span></div><div style="box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.15);-en-codeblock:true;"><div>synchronized(this) { //this: the object that should be locked</div><div>    //../ critical section</div><div>}</div></div><div><br/></div><div>A thread, when calling a synchronized block:</div><ul><li><div>if lock is free, go</div></li><li><div>otherwise go to sleep &amp; awaken when lock is free</div></li></ul><div><br/></div><div>Implicit (synchronized) -</div><ul><li><div>cannot interrupt threads waiting</div></li><li><div>can't check if free before requesting access</div></li><li><div>can't stop waiting</div></li><li><div>they're not fair</div></li></ul><div><b><br/></b></div><div><b>Refer to Lab Three</b></div></div></span>
+</div>
+<hr>
+<a name="529"/>
+<h1>Explicit Lock VS Implicit Lock</h1>
+<div>
+<table bgcolor="#D4DDE5" border="0">
+<tr><td><b>Created:</b></td><td><i>29/04/2018 3:00 PM</i></td></tr>
+<tr><td><b>Updated:</b></td><td><i>29/04/2018 3:07 PM</i></td></tr>
+</table>
+</div>
+<br/>
+
+<div>
+<span><div><div><b>Which lock is ideal?</b></div><ul><li><div>Use synchronous if limitations don't matter since it's easy to use.<br/></div></li><li><div>If need more functionality, use reentrant locks such as having simultaneous readers, or checking if a lock is in lock state before accessing it.<br/></div></li></ul><div><br/></div><div>Ultimate goal: Avoid critical sections wherever possible otherwise, keep size minimal.</div><div><br/></div><div><b>Volatile</b></div><ul><li><div>These variables are placed into main memory. This makes writing to the variable <i>atomic</i>. <br/></div></li><li><div>However, there may still be memory consistency problems where threads try to access the same variable at the same time when writing: only one will win access to the atomic operation. <br/></div></li><li><div>Implement compare &amp; swap (see Atomic Classes for more) to fix this.<br/></div></li></ul><div><br/></div></div></span>
+</div>
+<hr>
+<a name="457"/>
+<h1>Semaphores</h1>
+<div>
+<table bgcolor="#D4DDE5" border="0">
+<tr><td><b>Created:</b></td><td><i>17/04/2018 7:26 PM</i></td></tr>
+<tr><td><b>Updated:</b></td><td><i>20/04/2018 6:45 PM</i></td></tr>
+</table>
+</div>
+<br/>
+
+<div>
+<span><div><div><span style="font-weight: bold;"><font style="font-size: 12pt;">Semaphores</font></span></div><div><br/></div><ul><li><div>Semaphores were founded by Edsger W. Dijkstra.</div></li><li><div>Two methods: acquire() and release()</div></li><li><div>A semaphore is basically an <span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">atomic integer</span>.</div></li><li><div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">Acquire() checks if the integer is greater than zero. If it is, it's decreased by one and the thread is allowed in the critical section.</span></div></li><li><div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">Release() checks if there are any suspended process waiting, and if there is it wakes only one up. Otherwise, increases the semaphore.</span></div></li><li><div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">Generic (or counting) semaphores allow multiple threads into the critical section.</span> Often good for controlling access to a limited amount of resources: such as items in a buffer being added/removed.</div></li></ul><div><br/></div><div>Refer to BarberShop for implementation (src folder).</div><div><br/></div></div><div><br/></div></span>
+</div>
+<hr>
+<a name="459"/>
+<h1>Atomic Classes</h1>
+<div>
+<table bgcolor="#D4DDE5" border="0">
+<tr><td><b>Created:</b></td><td><i>17/04/2018 7:34 PM</i></td></tr>
+<tr><td><b>Updated:</b></td><td><i>20/04/2018 6:45 PM</i></td></tr>
+</table>
+</div>
+<br/>
+
+<div>
+<span><div><span style="font-weight: bold;"><font style="font-size: 12pt;">Atomic Classes</font></span></div><div><span style="font-weight: bold;"><br/></span></div><div><span style="font-weight: bold;">Compare &amp; Swap</span></div><div>Is a machine instruction which means it's atomic (cannot be interrupted). It's used to check if a variable's old value is still the same before assigning a new value: checking if another thread is accessing it.</div><div><br/></div><div><span style="font-weight: bold;">java.util.concurrent.atomic</span></div><div>Provides the atomic classes. They have methods: get() &amp; set() which is equivalent to volatile variables.</div><div><br/></div><div><br/></div><div><br/></div><div><img src="concurrent_files/Image [27].png" type="image/png" data-filename="Image.png"/></div><div><br/></div></span>
+</div>
+<hr>
+<a name="465"/>
+<h1>Monitors</h1>
+<div>
+<table bgcolor="#D4DDE5" border="0">
+<tr><td><b>Created:</b></td><td><i>19/04/2018 6:48 PM</i></td></tr>
+<tr><td><b>Updated:</b></td><td><i>2/05/2018 12:24 PM</i></td></tr>
+</table>
+</div>
+<br/>
+
+<div>
+<span><div><div><span style="font-weight: bold; font-size: 12pt;">Monitors</span></div><div><br/></div><ul><li><div>Monitors use a 'wait and notify' method to communicate between other threads.</div></li><li><div>That is, wait() and notify() methods corresponding to sleep and wake up.</div></li><li><div>wait() is a must, sleep() does not enforce locks. Wait() is implemented with locking features.</div></li><li><div>A monitor <span style="font-style: italic;">'is essentially a</span> <span style="font-style: italic; font-weight: bold;">shared class</span> <span style="font-style: italic;">with</span> <span style="font-style: italic; font-weight: bold;">explicit queues</span><span style="font-style: italic;">'</span>.</div></li><li><div><span style="font-weight: bold;">A shared class</span> refers to a toolkit accessible by multiple threads, while all methods are synchronized but attributes remain encapsulated.</div></li><li><div>Using a monitor to protect a class (a data structure?) and assure it is mutex. <span style="font-style: italic;">Java has implemented this in the root Object class, so all objects have it.</span></div></li></ul><div><br/></div><div><br/></div><div><span style="font-weight: bold;">Methods in Java.lang.Object</span></div><div>notify() - wakes up a single chosen thread waiting on this object's monitor.</div><div>notifyAll() - wakes up all threads waiting on this object's monitors.</div><div>Threads awakened in the above method will not be able to proceed until the current thread holding the object's monitor relinquishes the lock on the object.</div><div>wait() - waits until it has been notified.</div><div><br/></div><div>wait() should be guarded, in the event a thread is awakened when it shouldn't be. For example,</div><div>synchronized(obj) {</div><div>    while(&lt;condition does not hold&gt;)</div><div>        obj.wait();</div><div>}</div><div>This makes the thread currently accessing the object, wait until some condition is met.</div><div><br/></div><div>Refer to ProducerProblem in monitors package.</div></div><div><br/></div><div><br/></div><div><b>Monitors &amp; Semaphores are equivalent</b></div><div><img src="concurrent_files/Image [28].png" type="image/png" data-filename="Image.png" width="290"/></div><div><br/></div></span>
+</div>
+<hr>
+<a name="547"/>
+<h1>Thread Pools</h1>
+<div>
+<table bgcolor="#D4DDE5" border="0">
+<tr><td><b>Created:</b></td><td><i>2/05/2018 12:31 PM</i></td></tr>
+<tr><td><b>Updated:</b></td><td><i>3/05/2018 1:10 PM</i></td></tr>
+</table>
+</div>
+<br/>
+
+<div>
+<span><div><div><div><span style="font-weight: bold;">Thread Pools</span></div><ol><li><div>Threads are created.</div></li><li><div>Threads wait until they are given tasks.</div></li><li><div>Once finished, they return to the thread pool.</div></li></ol><div><br/></div><ul><li><div>Pools can be created using <span style="font-style: italic;">ThreadPoolExecutor</span><br/></div></li></ul></div><ul><li><div><span style="font-style: italic;">LinkedBlockingQueue</span> is used to store any tasks that are waiting to run.<br/></div></li><li><div>The <i>ThreadPoolExecutor.execute()</i> method is used to call  a run() method of a thread implementation.<br/></div></li><li><div>Thread pools are terminated using <i>ThreadPoolExecutor.shutdown()</i>. All tasks will be completed, but no new tasks will be accepted. <i>shutdownNow</i>() will attempt to stop all current tasks as well. Returns list of tasks waiting for execution.</div></li><li><div>The pool shrinks to its specified minimum if threads go unused.</div></li></ul><div><br/></div><div><b>Different types of blocking queues</b></div><div>There are different types of blocking queues (which store the awaiting tasks).</div><ul><li><div><i>ArrayBlockingQueue</i> (FIFO, bounded queue)</div></li><li><div><i>LinkedBlockingQueue</i>: linked list (FIFO, unbounded queue)</div></li><li><div><i>PriorityBlockingQueue</i>: orders tasks by priority</div></li><li><div><i>SynchronousQueue</i>: doesn't maintain a list, but forwards directly to a thread.</div></li></ul><div><br/></div><div><b>Thread Factory</b></div><div>Creates threads on demand.</div><div><b><br/></b></div><div><b>The Rejected Execution Handler</b></div><div>Decides how to deal with tasks that are rejected by the execute() method.</div><ul><li><div><i>AbortPolicy</i>: throws a <i>RejectedExecutionException</i></div></li><li><div><i>CallerRunsPolicy</i>: executes the new task outside the thread pool.</div></li><li><div><i>DiscordPolicy</i> discards the task.</div></li><li><div><i>DiscardOldestPolicy</i>: discards the oldest task in the queue.</div></li></ul><div><br/></div><div><b>Executors</b></div><div>There are classes which makes the job easier. <i>newCachedThreadPool</i>() - reuses cached threads, <i>newFixedThreadPool()</i><b style="font-style: italic;"> </b>- reuses a fixed number of threads. Also, <i>newScheduledThreadPool</i>().</div><div><br/></div><div><img src="concurrent_files/Image [29].png" type="image/png" data-filename="Image.png"/></div><div><br/></div></div></span>
+</div>
+<hr>
+<a name="565"/>
+<h1>Message Passing Interface (MPI)</h1>
+<div>
+<table bgcolor="#D4DDE5" border="0">
+<tr><td><b>Created:</b></td><td><i>8/05/2018 1:17 PM</i></td></tr>
+<tr><td><b>Updated:</b></td><td><i>14/05/2018 5:50 PM</i></td></tr>
+</table>
+</div>
+<br/>
+
+<div>
+<span><div><div><span style="font-weight: bold;">Message Passing</span></div><div><br/></div><div>Shared memory space is fine, until you have processes or threads across the network. This requires some sort of communication protocol.</div><div><br/></div><div>Such system is called <span style="font-weight: bold;">Distributed Memory</span>. Since each thread or process has its own memory, there is no worry regarding race conditions.</div><div><br/></div><div><img src="concurrent_files/Image [30].png" type="image/png" data-filename="Image.png"/></div><div><br/></div><div><span style="font-weight: bold;">Two methods for communication</span></div><div><br/></div><ul><li><div><span style="font-style: italic;">Synchronous</span>: threads sending &amp; receiving messages are blocked until the message is sent.</div></li><li><div><span style="font-style: italic;">Asynchronous:</span> threads will not block.</div></li><li><div><span style="font-style: italic;">Rendezvous</span>: implements Request-Reply. Asynchronous receiving and synchronous reply. So a thread waits until the other thread replies.</div></li></ul><div><br/></div><div><br/></div><div><span style="font-weight: bold;">MPI in Java using MPJ</span></div><div><br/></div><div>MPJ offers the following methods:</div><ol><li><div><span style="font-style: italic;">Send</span>: blocks while sending the message to the process.</div></li><li><div><span style="font-style: italic;">Recv</span>: blocks until it receives.</div></li><li><div><span style="font-style: italic;">Isend</span>: non-blocking send.</div></li><li><div><span style="font-style: italic;">Irecv</span>: non-blocking receiving.</div></li><li><div><span style="font-style: italic;">Bcast</span>: sends a global message.</div></li><li><div>MPI.Wtime() returns the current time stamp.</div></li></ol><div><br/></div><div><br/></div><div><span style="font-weight: bold;">Collective Communication</span></div><div><img src="concurrent_files/Image [31].png" type="image/png" data-filename="Image.png"/></div><div>Processes can combine messages to create a structure. <b>The load is furthermore balanced</b> across processes speeding up the process since the system is using parallelism.</div><div><br/></div><div>There are functions such as <span style="font-style: italic;">MPI.SUM</span> used to combine data from many processes. <span style="font-style: italic;">MPI.Allreduce</span> transmits messages to all processes.  <i>MPI.reduce</i> passes the content onto a single process.</div><div><br/></div><div><span style="font-weight: bold;">Safety</span></div><div>Deadlock is possible. If unsure if process can deadlock, use <span style="font-style: italic;">synchronized</span>. <span style="font-style: italic;">MPI.Ssend</span> enforces <span style="font-style: italic;">synchronized</span>.</div></div><div><br/></div></span>
+</div>
+<hr>
+<a name="597"/>
+<h1>Message Passing Java (MPJ) ...more</h1>
+<div>
+<table bgcolor="#D4DDE5" border="0">
+<tr><td><b>Created:</b></td><td><i>22/05/2018 2:59 PM</i></td></tr>
+<tr><td><b>Updated:</b></td><td><i>22/05/2018 6:02 PM</i></td></tr>
+</table>
+</div>
+<br/>
+
+<div>
+<span><div><div><span style="font-weight: bold;">Some more on Message Passing</span></div><div>The rank is the current process' ID. Each process has its own ID which uniquely identifies it. The size is the total number of processes specified when running with <b><i>-np {NUMBER OF PROCESSES}</i></b> as a parameter.</div><div><img src="concurrent_files/Image [32].png" type="image/png" data-filename="Image.png" width="556"/></div><div><span style="font-weight: bold;"><br/></span></div><div>The <a href="http://mpi.comm_world/">MPI.COMM_WORLD</a> class is the communicator which handles the parallelism behind the communication between the processes. This class contains the methods <i>Send, Recv, Isend, Irecv, Bcast, Reduce, Gather, Scatter, and Barrier. I at beginning is non-blocking.</i></div><div><i><br/></i></div><div><b>Example usage in terms of scientific programming</b></div><div>The trapezoidal rule for example approximates the area underneath a curve. The number, n, is how many times the area underneath the curve is divided. This is also the number of processes for example, that will calculate their own individual areas.</div><div><img src="concurrent_files/Image [33].png" type="image/png" data-filename="Image.png" width="411"/></div><ol><li><div>partition the solution into tasks.</div></li><ol><li><div>find the area of an individual trapezoid.</div></li><li><div>sum the areas.</div></li></ol><li><div>identify the communication channels between the tasks: pass the final areas to the process which sums the lot.</div></li><li><div>aggregate the tasks into composite tasks.</div></li><ol><li><div>how many processes are needed? n</div></li><li><div>split the range (b - a) by n.</div></li></ol></ol><div><br/></div><div>Each process will run the same implemented function. Therefore, the rank can be used to determine the value of x for performing the calculation. While rank == 0, is the root process summing, the other process send to the root process. Note MPI.DOUBLE is simply the data-type declaration.</div><div><br/></div><div><img src="concurrent_files/Image [34].png" type="image/png" data-filename="Image.png" width="423"/></div><div><b><br/></b></div><div><b>WARNING (Deadlock)</b></div><div>Deadlock can occur with the BLOCKING version of COMM_WORLD.Send, so use ISend for non-blocking. There are also <b>synchronized</b> versions: MPI.COMM_WORLD.Ssend</div><div><br/></div><div><br/></div><div><b>Efficiency (Scatter, Gather, Collective Communication, Reduce, Allreduce)</b></div><div>In these example, process rank = 0 deals with all the messages. However, this isn't exactly efficient. This is when <i>Collective Communication</i> plays a role. It's a tree-based structure, where messages are passed along as they are finished. The load is somewhat more balanced between processes. This implies that there is more work done in parallel, which makes the program more efficient.</div><div><br/></div><div><img src="concurrent_files/Image [35].png" type="image/png" data-filename="Image.png" width="212"/></div><div>There is a method in MPI.COMM_WORLD, Reduce (the following is for C).</div><div style="box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.15);-en-codeblock:true;"><div>//Function prototype</div><div>MPI_Reduce(</div><div>    void* send_data, <span>    </span>//An array of data to send</div><div>    void* recv_data, <span>    </span>//Needed for Root process, to recv data. size: sizeof(datatype) * count</div><div>    int count, <span>    </span><span>    <span>  </span></span>//Total # of processes</div><div>    MPI_Datatype datatype,<span>    //The data type of the data (i.e MPI.DOUBLE)</span></div><div>    MPI_Op op,<span>    </span><span>    </span><span>    //The operation to perform, i.e MPI.SUM</span></div><div>    int root,<span>    </span><span>    </span><span>    //The Rank of the root process</span></div><div>    MPI_Comm communicator</div><div>)</div></div><div><font style="color: rgb(0, 0, 255);"><u>Refer to ./MPI/mpj_reduce.pdf</u></font></div><div><font>MPI.COMM_WORLD.Allreduce transmits to all processes, rather than just root.</font></div><div><font><a href="http://mpi.comm_world.scatter/">MPI.COMM_WORLD.Scatter</a> and <a href="http://mpi.comm_world.gather/">MPI.COMM_WORLD.Gather</a> scatter and gather data arrays from multiple processes. Scatter to give, gather to collect the results.</font></div><div><span style="font-weight: bold;"><br/></span></div><div><span style="font-weight: bold;"><br/></span></div><div><span style="font-weight: bold;"><br/></span></div><div><span style="font-weight: bold;">Run configuration (IntelliJ IDEA)</span></div><div><img src="concurrent_files/Image [36].png" type="image/png" data-filename="Image.png" width="559"/></div><div><br/></div></div></span>
+</div>
+<hr>
+<a name="662"/>
+<h1>MPI v MapReduce v OpenCL</h1>
+<div>
+<table bgcolor="#D4DDE5" border="0">
+<tr><td><b>Created:</b></td><td><i>30/05/2018 1:18 PM</i></td></tr>
+<tr><td><b>Updated:</b></td><td><i>30/05/2018 1:18 PM</i></td></tr>
+</table>
+</div>
+<br/>
+
+<div>
+<span><div><br/></div></span>
+</div>
+<hr>
+<a name="672"/>
+<h1>OpenMP</h1>
+<div>
+<table bgcolor="#D4DDE5" border="0">
+<tr><td><b>Created:</b></td><td><i>31/05/2018 11:12 AM</i></td></tr>
+<tr><td><b>Updated:</b></td><td><i>18/06/2018 12:28 PM</i></td></tr>
+</table>
+</div>
+<br/>
+
+<div>
+<span><div><div><span style="font-weight: bold; font-size: 12pt;">Open Multi Processing</span></div><div><br/></div><div>A master thread can spawn a team of threads. These teams form clutters called parallel regions. In Java, there is a port for OpenMP called Jomp (since OpenMP is designed for C/C++ &amp; Fortran).</div><div><br/></div><div>Rather than using #pragma, like in C to tell the compiler to do something... Java &amp; Fortran uses the keyword, <span style="font-style: italic;">omp</span>. Jomp has it's own compiler, which then after being compiled, compiles down to Java.</div><div><br/></div><div><img src="concurrent_files/Image [37].png" type="image/png" data-filename="Image.png" width="267"/><img src="concurrent_files/Image [38].png" type="image/png" data-filename="Image.png" width="318"/></div><div><br/></div><div><span style="font-style: italic; font-weight: bold;">//omp parallel</span>, defines a portion of code that should be executed in parallel.</div><div>While, <span style="font-style: italic; font-weight: bold;">//omp barrier</span>, each thread waits at the barrier until all the threads arrive.</div><div>For synchronization &amp; critical sections, <span style="font-style: italic; font-weight: bold;">//omp critical</span>.</div><div><br/></div><div><img src="concurrent_files/Image [39].png" type="image/png" data-filename="Image.png" width="303"/></div><div><br/></div><div><span style="font-weight: bold;">Parallel Loops</span></div><div>OpenMP allows for <span style="font-style: italic;">for loops</span> to be executed in parallel. Only works for for loops, and only if the number of iterations is known. At the end of parallel constructs, there is an implicit barrier.</div><div><img src="concurrent_files/Image [40].png" type="image/png" data-filename="Image.png" width="150"/></div><div><b>WARNING</b>: eliminate any dependency. All threads need access to a[0], so set it prior to the for loop.</div><div>A race condition exists in the following example, since the iterations are performed in a range of threads, local variables differ between threads inside the loop.</div><div><img src="concurrent_files/Image [41].png" type="image/png" data-filename="Image.png" width="223"/></div><div><br/></div><div>Therefore, a reduction variable must be used: basically declares a global variable that is shared across threads. Results from each thread are combined. A reduction variable can be declared using <span style="font-style: italic; font-weight: bold;">//omp parallel reduction(+: varname)</span> where + is the operation being performed on the variable.</div><div><br/></div><div><img src="concurrent_files/Image [42].png" type="image/png" data-filename="Image.png" width="232"/></div><div><br/></div><div><br/></div><div><img src="concurrent_files/Image [43].png" type="image/png" data-filename="Image.png"/></div><div><br/></div><div><br/></div><div><span style="font-weight: bold;">Compiling &amp; Runtime</span></div><div>To compile, must use <a href="http://jomp.compiler.jomp/">jomp.compiler.Jomp</a> someFile (with .jomp extension). This will produce a Java file, which can then be compiled. Javac someFile.java. Then running, the number of threads must be specified, java -Djomp.threads=n someFile. jomp1.Ob.jar must be in the CLASSPATH.</div><div><br/></div><div><img src="concurrent_files/Image [44].png" type="image/png" data-filename="Image.png" width="589"/></div><div><br/></div><div><br/></div><div><span style="font-weight: bold;">Notes</span></div><div>In the notes, it uses an array, result[] to fetch the results. The reason it cannot return a result, is because it's being performed in parallel. Likewise, if it was a simple integer, it would not correspond to the same memory address. Therefore, an array is used. <span style="font-weight: bold; font-style: italic;">//omp sections { ... }</span> followed by <span style="font-weight: bold; font-style: italic;">//omp section</span> for specifying what should go on in the first &amp; second threads, is useful.</div><div><img src="concurrent_files/Image [45].png" type="image/png" data-filename="Image.png" width="345"/></div><div><br/></div><div><b>//omp for schedule(static, chunk)</b></div><ol><li><div>chunk is some integer which defines how many iterations per block or thread. Default is total_iter/thread_count</div></li></ol><div><br/></div></div></span>
+</div>
+<hr>
+<a name="690"/>
+<h1>Assignment</h1>
+<div>
+<table bgcolor="#D4DDE5" border="0">
+<tr><td><b>Created:</b></td><td><i>31/05/2018 11:34 PM</i></td></tr>
+<tr><td><b>Updated:</b></td><td><i>9/06/2018 12:44 PM</i></td></tr>
+</table>
+</div>
+<br/>
+
+<div>
+<span><div><div><span style="font-weight: bold;">What will need to be done initially?</span></div><ol><li><div>Load entire Iris data set (<span style="font-style: italic;">training</span> set).</div></li><li><div>Define y, := test instance.</div></li><li><div>Define k, the number of neighbors (or threads).</div></li></ol><div><br/></div><div><br/></div><div><span style="font-weight: bold;">What will need to be done, in parallel?</span></div><ol><li><div>Calculate distance between test &amp; training vectors.</div></li><li><div>Update list of k closest neighbors.</div></li></ol><div><br/></div><div><span style="font-weight: bold;">Barrier</span></div><ol><li><div>At the end, the class with majority of k neighbors is selected/output.</div></li></ol><div><br/></div><div><br/></div><div>In other words, finding the closest k neighbors, then the test data point will belong to the class which has the most neighbors.</div><div><br/></div><div><img src="concurrent_files/Image [46].png" type="image/png" data-filename="Image.png"/></div><div>So, the class with the most neighbors is the <img src="concurrent_files/Image [47].png" type="image/png" data-filename="Image.png"/> (2 v 1). <span style="font-size: 14pt; font-weight: bold;">?</span> then belongs to <img src="concurrent_files/Image [48].png" type="image/png" data-filename="Image.png"/></div><div><br/></div><div><br/></div><ol><li><div>Let k, be the number of processes, but also the number of closest neighbors to compute.</div></li><li><div>Each thread finds the closest neighbor for... problem: there may be a second point in another data set closer than a point in another data set.</div></li></ol><div><br/></div><div>DESIRE: Minimize communication, MPI is the choice since for larger data sets, they require more memory while there isn't as much computation being carried out. This enables the ability to use many nodes to have their individual memory (i.e servers), rather than having it on a single node. This makes the system expandable.</div><div><br/></div><div>There is a testing set consisting of fifteen vectors.</div><div>Now, there is a training set which contains all the data minus the testing set. This will be 135 vectors.</div><div><br/></div></div><div><br/></div></span>
+</div></body></html> 
