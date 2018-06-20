@@ -1,0 +1,71 @@
+{
+    "member": {
+      "statedistrict": "AK00",
+      "member-info": {
+        "namelist": "Young, Don",
+        "bioguideID": "Y000033",
+        "lastname": "Young",
+        "firstname": "Don",
+        "sort-name": "YOUNG,DON",
+        "courtesy": "Mr.",
+        "prior-congress": 114,
+        "official-name": "Don Young",
+        "formal-name": "Mr. Young of Alaska",
+        "party": "R",
+        "caucus": "R",
+        "state": {
+          "postal-code": "AK",
+          "state-fullname": "Alaska"
+        },
+        "district": "At Large",
+        "townname": "Fort Yukon",
+        "office-building": "RHOB",
+        "office-room": 2314,
+        "office-zip": 20515,
+        "office-zip-suffix": "0200",
+        "phone": "(202) 225-5765",
+        "elected-date": {
+          "date": "20161108",
+          "text": "November  8, 2016"
+        },
+        "sworn-date": {
+          "date": "20170103",
+          "text": "January  3, 2017"
+        }
+      },
+      "committee-assignments": {
+        "committee": [
+          {
+            "comcode": "II00",
+            "rank": 2
+          },
+          {
+            "comcode": "PW00",
+            "rank": 2
+          }
+        ],
+        "subcommittee": [
+          {
+            "subcomcode": "II10",
+            "rank": 2
+          },
+          {
+            "subcomcode": "II24",
+            "rank": 2
+          },
+          {
+            "subcomcode": "PW05",
+            "rank": 2
+          },
+          {
+            "subcomcode": "PW07",
+            "rank": 2
+          },
+          {
+            "subcomcode": "PW12",
+            "rank": 2
+          }
+        ]
+      }
+    }
+  }

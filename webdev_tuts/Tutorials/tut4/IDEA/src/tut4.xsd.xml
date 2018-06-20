@@ -1,0 +1,29 @@
+<TVSCHEDULE NAME="xmasEve">
+    <!--1 or more repetitions:-->
+    <CHANNEL CHAN="7">
+        <BANNER>Channel Seven</BANNER>
+    <!--1 or more repetitions:-->
+        <DAY>
+            <DATE>2017-12-24</DATE>
+            <!--You have a CHOICE of the next 2 items at this level-->
+            <!--<HOLIDAY>string</HOLIDAY>-->
+            <!--1 or more repetitions:-->
+            <PROGRAMSLOT VTR="???">
+                <TIME>19:30:30</TIME>
+                <TITLE RATING="89" LANGUAGE="en/US">Lucifer</TITLE>
+                <!--Optional:-->
+                <DESCRIPTION>Lucifer is back and is paranoid about a recent murder.</DESCRIPTION>
+            </PROGRAMSLOT>
+            <PROGRAMSLOT VTR="???">
+                <TIME>20:30:13</TIME>
+                <TITLE RATING="91" LANGUAGE="en/US">Mr. Robot</TITLE>
+                <!--Optional:-->
+                <DESCRIPTION>Mr. Robot is taking over using his psychological powers to take down Evil Corps.</DESCRIPTION>
+            </PROGRAMSLOT>
+        </DAY>
+        <DAY>
+            <DATE>2017-12-25</DATE>
+            <HOLIDAY>Christmas Day</HOLIDAY>
+        </DAY>
+    </CHANNEL>
+</TVSCHEDULE>

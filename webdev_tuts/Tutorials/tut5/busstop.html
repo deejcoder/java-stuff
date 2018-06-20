@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Bus Stop data </h2>
+
+<p id="display"></p>
+<ol id="list">
+
+</ol>
+
+<script>
+
+var xmlhttp = new XMLHttpRequest();
+
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        JSObj = JSON.parse(this.responseText);
+        document.getElementById("display").innerHTML = JSObj.type;
+
+        //First, we must loop through the array of bus stops
+        for(var i = 0; i < JSObj.features.length; i++) {
+            //Then create a new LI element to append to the ordered list
+            var node = document.createElement("LI");
+            //Set the innerHTML of the new node to /this/ BusStopLocation
+            node.innerHTML = JSObj.features[i].properties.BusStopLocation;
+            //Finally append the new node as a child to the ordered list
+            document.getElementById("list").appendChild(node);
+        }
+    }
+};
+xmlhttp.open("GET", "busstop.json", true);
+xmlhttp.send();
+
+</script>
+
+</body>
+</html>

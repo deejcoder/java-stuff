@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+<!-- This is for a program (PROGRAMSLOT) title -->
+<xs:complexType name="titleType">
+    <xs:simpleContent>
+        <xs:extension base="xs:string">
+            <xs:attribute name="RATING" type="xs:integer" use="optional"/>
+            <xs:attribute name="LANGUAGE" type="xs:string" use="optional"/>
+        </xs:extension>
+    </xs:simpleContent>
+</xs:complexType>
+
+<!-- PROGRAMSLOT contains a TV program -->
+<xs:complexType name="programSlotType">
+    <xs:sequence>
+        <xs:element name="TIME" type="xs:time"/>
+        <xs:element name="TITLE" type="titleType"></xs:element>
+        <xs:element name="DESCRIPTION" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="VTR" type="xs:string" use="optional"/>
+</xs:complexType>
+
+
+
+<!-- DAY can either contain a holiday or one or more PROGRAMSLOT -->
+<xs:complexType name="dayType">
+    <xs:sequence>
+        <xs:element name="DATE" type="xs:date"/>
+        <xs:choice maxOccurs="unbounded">
+            <xs:element name="HOLIDAY" type="xs:string"/>
+            <xs:element name="PROGRAMSLOT" type="programSlotType" maxOccurs="unbounded"/>
+        </xs:choice>
+    </xs:sequence>
+</xs:complexType>
+
+
+
+<!-- CHANNEL contains a DAY which contains a PROGRAMSLOT -->
+<xs:complexType name="channelType">
+    <xs:sequence>
+        <xs:element name="BANNER" type="xs:string" />
+        <xs:element name="DAY" type="dayType" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="CHAN" type="xs:integer" use="required"/>
+</xs:complexType>
+
+
+
+<xs:complexType name="tvScheduleType">
+    <xs:sequence>
+        <xs:element name="CHANNEL" type="channelType" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="NAME" type="xs:string" use="required"/>
+</xs:complexType>
+
+<xs:element name="TVSCHEDULE" type="tvScheduleType" />
+
+
+</xs:schema>

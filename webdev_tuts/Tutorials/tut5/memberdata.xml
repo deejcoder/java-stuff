@@ -1,0 +1,2481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="member.xsl"?>
+<MemberData publish-date="March 1, 2017">
+   <title-info>
+      <congress-num>115</congress-num>
+      <congress-text>One Hundred Fifteenth Congress</congress-text>
+      <session>1</session>
+      <majority>R</majority>
+      <minority>D</minority>
+      <clerk>Karen L. Haas</clerk>
+      <weburl>http://clerk.house.gov</weburl>
+   </title-info>
+   <members>
+      <member>
+         <statedistrict>AK00</statedistrict>
+         <member-info>
+            <namelist>Young, Don</namelist>
+            <bioguideID>Y000033</bioguideID>
+            <lastname>Young</lastname>
+            <firstname>Don</firstname>
+            <middlename />
+            <sort-name>YOUNG,DON</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Don Young</official-name>
+            <formal-name>Mr. Young of Alaska</formal-name>
+            <party>R</party>
+            <caucus>R</caucus>
+            <state postal-code="AK">
+               <state-fullname>Alaska</state-fullname>
+            </state>
+            <district>At Large</district>
+            <townname>Fort Yukon</townname>
+            <office-building>RHOB</office-building>
+            <office-room>2314</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0200</office-zip-suffix>
+            <phone>(202) 225-5765</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="II00" rank="2" />
+            <committee comcode="PW00" rank="2" />
+            <subcommittee subcomcode="II10" rank="2" />
+            <subcommittee subcomcode="II24" rank="2" />
+            <subcommittee subcomcode="PW05" rank="2" />
+            <subcommittee subcomcode="PW07" rank="2" />
+            <subcommittee subcomcode="PW12" rank="2" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>AL01</statedistrict>
+         <member-info>
+            <namelist>Byrne, Bradley</namelist>
+            <bioguideID>B001289</bioguideID>
+            <lastname>Byrne</lastname>
+            <firstname>Bradley</firstname>
+            <middlename />
+            <sort-name>BYRNE,BRADLEY</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Bradley Byrne</official-name>
+            <formal-name>Mr. Byrne</formal-name>
+            <party>R</party>
+            <caucus>R</caucus>
+            <state postal-code="AL">
+               <state-fullname>Alabama</state-fullname>
+            </state>
+            <district>1st</district>
+            <townname>Fairhope</townname>
+            <office-building>CHOB</office-building>
+            <office-room>119</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0101</office-zip-suffix>
+            <phone>(202) 225-4931</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="AS00" rank="21" />
+            <committee comcode="ED00" rank="11" />
+            <committee comcode="RU00" rank="6" />
+            <subcommittee subcomcode="AS28" rank="4" leadership="Vice Chair" />
+            <subcommittee subcomcode="AS29" rank="9" />
+            <subcommittee subcomcode="ED10" rank="1" leadership="Chairman" />
+            <subcommittee subcomcode="ED13" rank="5" />
+            <subcommittee subcomcode="RU02" rank="3" />
+            <subcommittee subcomcode="RU04" rank="2" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>AL02</statedistrict>
+         <member-info>
+            <namelist>Roby, Martha</namelist>
+            <bioguideID>R000591</bioguideID>
+            <lastname>Roby</lastname>
+            <firstname>Martha</firstname>
+            <middlename />
+            <sort-name>ROBY,MARTHA</sort-name>
+            <suffix />
+            <courtesy>Mrs.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Martha Roby</official-name>
+            <formal-name>Mrs. Roby</formal-name>
+            <party>R</party>
+            <caucus>R</caucus>
+            <state postal-code="AL">
+               <state-fullname>Alabama</state-fullname>
+            </state>
+            <district>2nd</district>
+            <townname>Montgomery</townname>
+            <office-building>CHOB</office-building>
+            <office-room>442</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0102</office-zip-suffix>
+            <phone>(202) 225-2901</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="AP00" rank="22" />
+            <committee comcode="JU00" rank="20" />
+            <subcommittee subcomcode="AP02" rank="10" />
+            <subcommittee subcomcode="AP07" rank="6" />
+            <subcommittee subcomcode="AP19" rank="5" />
+            <subcommittee subcomcode="JU08" rank="9" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>AL03</statedistrict>
+         <member-info>
+            <namelist>Rogers, Mike</namelist>
+            <bioguideID>R000575</bioguideID>
+            <lastname>Rogers</lastname>
+            <firstname>Mike</firstname>
+            <middlename />
+            <sort-name>ROGERS,MIKE</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Mike Rogers</official-name>
+            <formal-name>Mr. Rogers of Alabama</formal-name>
+            <party>R</party>
+            <caucus>R</caucus>
+            <state postal-code="AL">
+               <state-fullname>Alabama</state-fullname>
+            </state>
+            <district>3rd</district>
+            <townname>Anniston</townname>
+            <office-building>RHOB</office-building>
+            <office-room>2184</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0103</office-zip-suffix>
+            <phone>(202) 225-3261</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="AG00" rank="5" />
+            <committee comcode="AS00" rank="7" />
+            <committee comcode="HM00" rank="4" />
+            <subcommittee subcomcode="AG16" rank="3" />
+            <subcommittee subcomcode="AG22" rank="3" />
+            <subcommittee subcomcode="AS03" rank="5" />
+            <subcommittee subcomcode="AS29" rank="1" leadership="Chairman" />
+            <subcommittee subcomcode="HM07" rank="3" />
+            <subcommittee subcomcode="HM11" rank="3" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>AL04</statedistrict>
+         <member-info>
+            <namelist>Aderholt, Robert</namelist>
+            <bioguideID>A000055</bioguideID>
+            <lastname>Aderholt</lastname>
+            <firstname>Robert</firstname>
+            <middlename>B.</middlename>
+            <sort-name>ADERHOLT,ROBERT</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Robert B. Aderholt</official-name>
+            <formal-name>Mr. Aderholt</formal-name>
+            <party>R</party>
+            <caucus>R</caucus>
+            <state postal-code="AL">
+               <state-fullname>Alabama</state-fullname>
+            </state>
+            <district>4th</district>
+            <townname>Haleyville</townname>
+            <office-building>CHOB</office-building>
+            <office-room>235</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0104</office-zip-suffix>
+            <phone>(202) 225-4876</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="AP00" rank="3" />
+            <subcommittee subcomcode="AP01" rank="1" leadership="Chairman" />
+            <subcommittee subcomcode="AP02" rank="6" />
+            <subcommittee subcomcode="AP19" rank="3" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>AL05</statedistrict>
+         <member-info>
+            <namelist>Brooks, Mo</namelist>
+            <bioguideID>B001274</bioguideID>
+            <lastname>Brooks</lastname>
+            <firstname>Mo</firstname>
+            <middlename />
+            <sort-name>BROOKS,MO</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Mo Brooks</official-name>
+            <formal-name>Mr. Brooks of Alabama</formal-name>
+            <party>R</party>
+            <caucus>R</caucus>
+            <state postal-code="AL">
+               <state-fullname>Alabama</state-fullname>
+            </state>
+            <district>5th</district>
+            <townname>Huntsville</townname>
+            <office-building>RHOB</office-building>
+            <office-room>2400</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0105</office-zip-suffix>
+            <phone>(202) 225-4801</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="AS00" rank="17" />
+            <committee comcode="FA00" rank="12" />
+            <committee comcode="SY00" rank="4" />
+            <subcommittee subcomcode="AS25" rank="14" />
+            <subcommittee subcomcode="AS29" rank="5" />
+            <subcommittee subcomcode="FA05" rank="5" />
+            <subcommittee subcomcode="FA07" rank="5" />
+            <subcommittee subcomcode="SY16" rank="4" leadership="Vice Chair" />
+            <subcommittee subcomcode="SY18" rank="4" />
+            <subcommittee subcomcode="SY20" rank="4" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>AL06</statedistrict>
+         <member-info>
+            <namelist>Palmer, Gary</namelist>
+            <bioguideID>P000609</bioguideID>
+            <lastname>Palmer</lastname>
+            <firstname>Gary</firstname>
+            <middlename>J.</middlename>
+            <sort-name>PALMER,GARY</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Gary J. Palmer</official-name>
+            <formal-name>Mr. Palmer</formal-name>
+            <party>R</party>
+            <caucus>R</caucus>
+            <state postal-code="AL">
+               <state-fullname>Alabama</state-fullname>
+            </state>
+            <district>6th</district>
+            <townname>Hoover</townname>
+            <office-building>CHOB</office-building>
+            <office-room>330</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0106</office-zip-suffix>
+            <phone>(202) 225-4921</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="BU00" rank="11" />
+            <committee comcode="GO00" rank="22" />
+            <committee comcode="SY00" rank="13" />
+            <subcommittee subcomcode="GO28" rank="4" />
+            <subcommittee subcomcode="GO29" rank="1" leadership="Chairman" />
+            <subcommittee subcomcode="SY18" rank="7" />
+            <subcommittee subcomcode="SY21" rank="4" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>AL07</statedistrict>
+         <member-info>
+            <namelist>Sewell, Terri</namelist>
+            <bioguideID>S001185</bioguideID>
+            <lastname>Sewell</lastname>
+            <firstname>Terri</firstname>
+            <middlename>A.</middlename>
+            <sort-name>SEWELL,TERRI</sort-name>
+            <suffix />
+            <courtesy>Ms.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Terri A. Sewell</official-name>
+            <formal-name>Ms. Sewell of Alabama</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="AL">
+               <state-fullname>Alabama</state-fullname>
+            </state>
+            <district>7th</district>
+            <townname>Birmingham</townname>
+            <office-building>RHOB</office-building>
+            <office-room>2201</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0107</office-zip-suffix>
+            <phone>(202) 225-2665</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="IG00" rank="3" />
+            <committee comcode="WM00" rank="14" />
+            <subcommittee subcomcode="IG02" rank="2" />
+            <subcommittee subcomcode="IG04" rank="1" />
+            <subcommittee subcomcode="WM02" rank="6" />
+            <subcommittee subcomcode="WM03" rank="3" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>AR01</statedistrict>
+         <member-info>
+            <namelist>Crawford, Eric</namelist>
+            <bioguideID>C001087</bioguideID>
+            <lastname>Crawford</lastname>
+            <firstname>Eric</firstname>
+            <middlename>A. "Rick"</middlename>
+            <sort-name>CRAWFORD,ERIC</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Eric A. "Rick" Crawford</official-name>
+            <formal-name>Mr. Crawford</formal-name>
+            <party>R</party>
+            <caucus>R</caucus>
+            <state postal-code="AR">
+               <state-fullname>Arkansas</state-fullname>
+            </state>
+            <district>1st</district>
+            <townname>Jonesboro</townname>
+            <office-building>RHOB</office-building>
+            <office-room>2422</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0401</office-zip-suffix>
+            <phone>(202) 225-4076</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="AG00" rank="9" />
+            <committee comcode="IG00" rank="10" />
+            <committee comcode="PW00" rank="7" />
+            <subcommittee subcomcode="AG03" rank="3" />
+            <subcommittee subcomcode="AG16" rank="1" leadership="Chairman" />
+            <subcommittee subcomcode="IG03" rank="4" />
+            <subcommittee subcomcode="IG04" rank="4" />
+            <subcommittee subcomcode="PW02" rank="2" />
+            <subcommittee subcomcode="PW12" rank="6" />
+            <subcommittee subcomcode="PW13" rank="2" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>AR02</statedistrict>
+         <member-info>
+            <namelist>Hill, J.</namelist>
+            <bioguideID>H001072</bioguideID>
+            <lastname>Hill</lastname>
+            <firstname>J.</firstname>
+            <middlename>French</middlename>
+            <sort-name>HILL,J.</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>J. French Hill</official-name>
+            <formal-name>Mr. Hill</formal-name>
+            <party>R</party>
+            <caucus>R</caucus>
+            <state postal-code="AR">
+               <state-fullname>Arkansas</state-fullname>
+            </state>
+            <district>2nd</district>
+            <townname>Little Rock</townname>
+            <office-building>LHOB</office-building>
+            <office-room>1229</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0402</office-zip-suffix>
+            <phone>(202) 225-2506</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="BA00" rank="23" />
+            <subcommittee subcomcode="BA01" rank="9" />
+            <subcommittee subcomcode="BA16" rank="10" />
+            <subcommittee subcomcode="BA20" rank="7" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>AR03</statedistrict>
+         <member-info>
+            <namelist>Womack, Steve</namelist>
+            <bioguideID>W000809</bioguideID>
+            <lastname>Womack</lastname>
+            <firstname>Steve</firstname>
+            <middlename />
+            <sort-name>WOMACK,STEVE</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Steve Womack</official-name>
+            <formal-name>Mr. Womack</formal-name>
+            <party>R</party>
+            <caucus>R</caucus>
+            <state postal-code="AR">
+               <state-fullname>Arkansas</state-fullname>
+            </state>
+            <district>3rd</district>
+            <townname>Rogers</townname>
+            <office-building>RHOB</office-building>
+            <office-room>2412</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0403</office-zip-suffix>
+            <phone>(202) 225-4301</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="AP00" rank="14" />
+            <committee comcode="BU00" rank="8" />
+            <subcommittee subcomcode="AP02" rank="5" />
+            <subcommittee subcomcode="AP07" rank="3" />
+            <subcommittee subcomcode="AP18" rank="5" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>AR04</statedistrict>
+         <member-info>
+            <namelist>Westerman, Bruce</namelist>
+            <bioguideID>W000821</bioguideID>
+            <lastname>Westerman</lastname>
+            <firstname>Bruce</firstname>
+            <middlename />
+            <sort-name>WESTERMAN,BRUCE</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Bruce Westerman</official-name>
+            <formal-name>Mr. Westerman</formal-name>
+            <party>R</party>
+            <caucus>R</caucus>
+            <state postal-code="AR">
+               <state-fullname>Arkansas</state-fullname>
+            </state>
+            <district>4th</district>
+            <townname>Hot Springs</townname>
+            <office-building>CHOB</office-building>
+            <office-room>130</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0404</office-zip-suffix>
+            <phone>(202) 225-3772</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="BU00" rank="12" />
+            <committee comcode="II00" rank="15" />
+            <committee comcode="PW00" rank="28" />
+            <subcommittee subcomcode="II06" rank="9" />
+            <subcommittee subcomcode="II10" rank="7" />
+            <subcommittee subcomcode="PW05" rank="19" />
+            <subcommittee subcomcode="PW12" rank="23" />
+            <subcommittee subcomcode="PW14" rank="14" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>AQ00</statedistrict>
+         <member-info>
+            <namelist>Radewagen, Aumua Amata</namelist>
+            <bioguideID>R000600</bioguideID>
+            <lastname>Radewagen</lastname>
+            <firstname>Aumua Amata</firstname>
+            <middlename>Coleman</middlename>
+            <sort-name>RADEWAGEN,AUMUAAMATA</sort-name>
+            <suffix />
+            <courtesy>Mrs.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Aumua Amata Coleman Radewagen</official-name>
+            <formal-name>Mrs. Radewagen</formal-name>
+            <party>R</party>
+            <caucus>R</caucus>
+            <state postal-code="AS">
+               <state-fullname>American Samoa</state-fullname>
+            </state>
+            <district>Delegate</district>
+            <townname>Pago Pago</townname>
+            <office-building>LHOB</office-building>
+            <office-room>1339</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>5200</office-zip-suffix>
+            <phone>(202) 225-8577</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="II00" rank="18" />
+            <committee comcode="SM00" rank="5" />
+            <committee comcode="VR00" rank="5" />
+            <subcommittee subcomcode="II15" rank="3" />
+            <subcommittee subcomcode="II24" rank="5" />
+            <subcommittee subcomcode="SM25" rank="4" />
+            <subcommittee subcomcode="SM26" rank="1" leadership="Chairman" />
+            <subcommittee subcomcode="VR03" rank="3" />
+            <subcommittee subcomcode="VR09" rank="3" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>AZ01</statedistrict>
+         <member-info>
+            <namelist>O'Halleran, Tom</namelist>
+            <bioguideID>O000171</bioguideID>
+            <lastname>O'Halleran</lastname>
+            <firstname>Tom</firstname>
+            <middlename />
+            <sort-name>OHALLERAN,TOM</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>0</prior-congress>
+            <official-name>Tom O'Halleran</official-name>
+            <formal-name>Mr. O'Halleran</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="AZ">
+               <state-fullname>Arizona</state-fullname>
+            </state>
+            <district>1st</district>
+            <townname>Sedona</townname>
+            <office-building>CHOB</office-building>
+            <office-room>126</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0301</office-zip-suffix>
+            <phone>(202) 225-3361</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="AG00" rank="17" />
+            <committee comcode="AS00" rank="26" />
+            <subcommittee subcomcode="AG15" rank="5" />
+            <subcommittee subcomcode="AG16" rank="9" />
+            <subcommittee subcomcode="AG22" rank="5" />
+            <subcommittee subcomcode="AS06" rank="2" />
+            <subcommittee subcomcode="AS25" rank="9" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>AZ02</statedistrict>
+         <member-info>
+            <namelist>McSally, Martha</namelist>
+            <bioguideID>M001197</bioguideID>
+            <lastname>McSally</lastname>
+            <firstname>Martha</firstname>
+            <middlename />
+            <sort-name>MCSALLY,MARTHA</sort-name>
+            <suffix />
+            <courtesy>Ms.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Martha McSally</official-name>
+            <formal-name>Ms. McSally</formal-name>
+            <party>R</party>
+            <caucus>R</caucus>
+            <state postal-code="AZ">
+               <state-fullname>Arizona</state-fullname>
+            </state>
+            <district>2nd</district>
+            <townname>Tucson</townname>
+            <office-building>CHOB</office-building>
+            <office-room>510</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0302</office-zip-suffix>
+            <phone>(202) 225-2542</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="AS00" rank="24" />
+            <committee comcode="HM00" rank="11" />
+            <subcommittee subcomcode="AS02" rank="6" />
+            <subcommittee subcomcode="AS03" rank="8" leadership="Vice Chair" />
+            <subcommittee subcomcode="AS25" rank="5" />
+            <subcommittee subcomcode="HM11" rank="1" leadership="Chairwoman" />
+            <subcommittee subcomcode="HM12" rank="3" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>AZ03</statedistrict>
+         <member-info>
+            <namelist>Grijalva, Raúl</namelist>
+            <bioguideID>G000551</bioguideID>
+            <lastname>Grijalva</lastname>
+            <firstname>Raúl</firstname>
+            <middlename>M.</middlename>
+            <sort-name>GRIJALVA,RAUL</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Raúl M. Grijalva</official-name>
+            <formal-name>Mr. Grijalva</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="AZ">
+               <state-fullname>Arizona</state-fullname>
+            </state>
+            <district>3rd</district>
+            <townname>Tucson</townname>
+            <office-building>LHOB</office-building>
+            <office-room>1511</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0303</office-zip-suffix>
+            <phone>(202) 225-2435</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="ED00" rank="3" />
+            <committee comcode="II00" rank="1" />
+            <subcommittee subcomcode="ED10" rank="2" />
+            <subcommittee subcomcode="ED14" rank="2" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>AZ04</statedistrict>
+         <member-info>
+            <namelist>Gosar, Paul</namelist>
+            <bioguideID>G000565</bioguideID>
+            <lastname>Gosar</lastname>
+            <firstname>Paul</firstname>
+            <middlename>A.</middlename>
+            <sort-name>GOSAR,PAUL</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Paul A. Gosar</official-name>
+            <formal-name>Mr. Gosar</formal-name>
+            <party>R</party>
+            <caucus>R</caucus>
+            <state postal-code="AZ">
+               <state-fullname>Arizona</state-fullname>
+            </state>
+            <district>4th</district>
+            <townname>Prescott</townname>
+            <office-building>RHOB</office-building>
+            <office-room>2057</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0304</office-zip-suffix>
+            <phone>(202) 225-2315</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="GO00" rank="7" />
+            <committee comcode="II00" rank="9" />
+            <subcommittee subcomcode="GO06" rank="5" />
+            <subcommittee subcomcode="GO28" rank="2" leadership="Vice Chair" />
+            <subcommittee subcomcode="II06" rank="1" leadership="Chairman" />
+            <subcommittee subcomcode="II13" rank="4" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>AZ05</statedistrict>
+         <member-info>
+            <namelist>Biggs, Andy</namelist>
+            <bioguideID>B001302</bioguideID>
+            <lastname>Biggs</lastname>
+            <firstname>Andy</firstname>
+            <middlename />
+            <sort-name>BIGGS,ANDY</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>0</prior-congress>
+            <official-name>Andy Biggs</official-name>
+            <formal-name>Mr. Biggs</formal-name>
+            <party>R</party>
+            <caucus>R</caucus>
+            <state postal-code="AZ">
+               <state-fullname>Arizona</state-fullname>
+            </state>
+            <district>5th</district>
+            <townname>Gilbert</townname>
+            <office-building>LHOB</office-building>
+            <office-room>1626</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0305</office-zip-suffix>
+            <phone>(202) 225-2635</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="JU00" rank="23" />
+            <committee comcode="SY00" rank="19" />
+            <subcommittee subcomcode="JU01" rank="8" />
+            <subcommittee subcomcode="JU03" rank="14" />
+            <subcommittee subcomcode="SY16" rank="12" />
+            <subcommittee subcomcode="SY18" rank="1" leadership="Chair" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>AZ06</statedistrict>
+         <member-info>
+            <namelist>Schweikert, David</namelist>
+            <bioguideID>S001183</bioguideID>
+            <lastname>Schweikert</lastname>
+            <firstname>David</firstname>
+            <middlename />
+            <sort-name>SCHWEIKERT,DAVID</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>David Schweikert</official-name>
+            <formal-name>Mr. Schweikert</formal-name>
+            <party>R</party>
+            <caucus>R</caucus>
+            <state postal-code="AZ">
+               <state-fullname>Arizona</state-fullname>
+            </state>
+            <district>6th</district>
+            <townname>Fountain Hills</townname>
+            <office-building>RHOB</office-building>
+            <office-room>2059</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0306</office-zip-suffix>
+            <phone>(202) 225-2190</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="EC00" rank="3" />
+            <committee comcode="WM00" rank="21" />
+            <subcommittee subcomcode="WM01" rank="3" />
+            <subcommittee subcomcode="WM06" rank="2" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>AZ07</statedistrict>
+         <member-info>
+            <namelist>Gallego, Ruben</namelist>
+            <bioguideID>G000574</bioguideID>
+            <lastname>Gallego</lastname>
+            <firstname>Ruben</firstname>
+            <middlename />
+            <sort-name>GALLEGO,RUBEN</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Ruben Gallego</official-name>
+            <formal-name>Mr. Gallego</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="AZ">
+               <state-fullname>Arizona</state-fullname>
+            </state>
+            <district>7th</district>
+            <townname>Phoenix</townname>
+            <office-building>LHOB</office-building>
+            <office-room>1218</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0307</office-zip-suffix>
+            <phone>(202) 225-4065</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="AS00" rank="16" />
+            <committee comcode="II00" rank="11" />
+            <subcommittee subcomcode="AS02" rank="4" />
+            <subcommittee subcomcode="AS25" rank="5" />
+            <subcommittee subcomcode="II10" rank="5" />
+            <subcommittee subcomcode="II15" rank="2" />
+            <subcommittee subcomcode="II24" rank="4" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>AZ08</statedistrict>
+         <member-info>
+            <namelist>Franks, Trent</namelist>
+            <bioguideID>F000448</bioguideID>
+            <lastname>Franks</lastname>
+            <firstname>Trent</firstname>
+            <middlename />
+            <sort-name>FRANKS,TRENT</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Trent Franks</official-name>
+            <formal-name>Mr. Franks of Arizona</formal-name>
+            <party>R</party>
+            <caucus>R</caucus>
+            <state postal-code="AZ">
+               <state-fullname>Arizona</state-fullname>
+            </state>
+            <district>8th</district>
+            <townname>Peoria</townname>
+            <office-building>RHOB</office-building>
+            <office-room>2435</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0308</office-zip-suffix>
+            <phone>(202) 225-4576</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="AS00" rank="8" />
+            <committee comcode="JU00" rank="7" />
+            <subcommittee subcomcode="AS26" rank="8" />
+            <subcommittee subcomcode="AS29" rank="2" leadership="Vice Chair" />
+            <subcommittee subcomcode="JU03" rank="5" />
+            <subcommittee subcomcode="JU10" rank="3" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>AZ09</statedistrict>
+         <member-info>
+            <namelist>Sinema, Kyrsten</namelist>
+            <bioguideID>S001191</bioguideID>
+            <lastname>Sinema</lastname>
+            <firstname>Kyrsten</firstname>
+            <middlename />
+            <sort-name>SINEMA,KYRSTEN</sort-name>
+            <suffix />
+            <courtesy>Ms.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Kyrsten Sinema</official-name>
+            <formal-name>Ms. Sinema</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="AZ">
+               <state-fullname>Arizona</state-fullname>
+            </state>
+            <district>9th</district>
+            <townname>Phoenix</townname>
+            <office-building>LHOB</office-building>
+            <office-room>1725</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0309</office-zip-suffix>
+            <phone>(202) 225-9888</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="BA00" rank="19" />
+            <subcommittee subcomcode="BA01" rank="7" />
+            <subcommittee subcomcode="BA16" rank="9" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA01</statedistrict>
+         <member-info>
+            <namelist>LaMalfa, Doug</namelist>
+            <bioguideID>L000578</bioguideID>
+            <lastname>LaMalfa</lastname>
+            <firstname>Doug</firstname>
+            <middlename />
+            <sort-name>LAMALFA,DOUG</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Doug LaMalfa</official-name>
+            <formal-name>Mr. LaMalfa</formal-name>
+            <party>R</party>
+            <caucus>R</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>1st</district>
+            <townname>Oroville</townname>
+            <office-building>CHOB</office-building>
+            <office-room>322</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0501</office-zip-suffix>
+            <phone>(202) 225-3076</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="AG00" rank="13" />
+            <committee comcode="II00" rank="12" />
+            <committee comcode="PW00" rank="27" />
+            <subcommittee subcomcode="AG15" rank="4" />
+            <subcommittee subcomcode="AG22" rank="4" />
+            <subcommittee subcomcode="II13" rank="5" />
+            <subcommittee subcomcode="II24" rank="1" leadership="Chairman" />
+            <subcommittee subcomcode="PW02" rank="15" />
+            <subcommittee subcomcode="PW05" rank="18" />
+            <subcommittee subcomcode="PW12" rank="22" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA02</statedistrict>
+         <member-info>
+            <namelist>Huffman, Jared</namelist>
+            <bioguideID>H001068</bioguideID>
+            <lastname>Huffman</lastname>
+            <firstname>Jared</firstname>
+            <middlename />
+            <sort-name>HUFFMAN,JARED</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Jared Huffman</official-name>
+            <formal-name>Mr. Huffman</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>2nd</district>
+            <townname>San Rafael</townname>
+            <office-building>LHOB</office-building>
+            <office-room>1406</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0502</office-zip-suffix>
+            <phone>(202) 225-5161</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="II00" rank="7" />
+            <committee comcode="PW00" rank="21" />
+            <subcommittee subcomcode="II06" rank="5" />
+            <subcommittee subcomcode="II13" rank="1" />
+            <subcommittee subcomcode="II15" rank="3" />
+            <subcommittee subcomcode="PW02" rank="4" />
+            <subcommittee subcomcode="PW07" rank="4" />
+            <subcommittee subcomcode="PW12" rank="9" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA03</statedistrict>
+         <member-info>
+            <namelist>Garamendi, John</namelist>
+            <bioguideID>G000559</bioguideID>
+            <lastname>Garamendi</lastname>
+            <firstname>John</firstname>
+            <middlename />
+            <sort-name>GARAMENDI,JOHN</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>John Garamendi</official-name>
+            <formal-name>Mr. Garamendi</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>3rd</district>
+            <townname>Walnut Grove</townname>
+            <office-building>RHOB</office-building>
+            <office-room>2438</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0503</office-zip-suffix>
+            <phone>(202) 225-1880</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="AS00" rank="10" />
+            <committee comcode="PW00" rank="12" />
+            <subcommittee subcomcode="AS28" rank="5" />
+            <subcommittee subcomcode="AS29" rank="4" />
+            <subcommittee subcomcode="PW02" rank="7" />
+            <subcommittee subcomcode="PW07" rank="1" />
+            <subcommittee subcomcode="PW14" rank="7" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA04</statedistrict>
+         <member-info>
+            <namelist>McClintock, Tom</namelist>
+            <bioguideID>M001177</bioguideID>
+            <lastname>McClintock</lastname>
+            <firstname>Tom</firstname>
+            <middlename />
+            <sort-name>MCCLINTOCK,TOM</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Tom McClintock</official-name>
+            <formal-name>Mr. McClintock</formal-name>
+            <party>R</party>
+            <caucus>R</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>4th</district>
+            <townname>Roseville</townname>
+            <office-building>RHOB</office-building>
+            <office-room>2312</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0504</office-zip-suffix>
+            <phone>(202) 225-2511</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="BU00" rank="4" />
+            <committee comcode="II00" rank="6" />
+            <subcommittee subcomcode="II10" rank="1" leadership="Chairman" />
+            <subcommittee subcomcode="II13" rank="3" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA05</statedistrict>
+         <member-info>
+            <namelist>Thompson, Mike</namelist>
+            <bioguideID>T000460</bioguideID>
+            <lastname>Thompson</lastname>
+            <firstname>Mike</firstname>
+            <middlename />
+            <sort-name>THOMPSON,MIKE</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Mike Thompson</official-name>
+            <formal-name>Mr. Thompson of California</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>5th</district>
+            <townname>St. Helena</townname>
+            <office-building>CHOB</office-building>
+            <office-room>231</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0505</office-zip-suffix>
+            <phone>(202) 225-3311</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="WM00" rank="5" />
+            <subcommittee subcomcode="WM02" rank="2" />
+            <subcommittee subcomcode="WM05" rank="4" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA06</statedistrict>
+         <member-info>
+            <namelist>Matsui, Doris</namelist>
+            <bioguideID>M001163</bioguideID>
+            <lastname>Matsui</lastname>
+            <firstname>Doris</firstname>
+            <middlename>O.</middlename>
+            <sort-name>MATSUI,DORIS</sort-name>
+            <suffix />
+            <courtesy>Ms.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Doris O. Matsui</official-name>
+            <formal-name>Ms. Matsui</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>6th</district>
+            <townname>Sacramento</townname>
+            <office-building>RHOB</office-building>
+            <office-room>2311</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0506</office-zip-suffix>
+            <phone>(202) 225-7163</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="IF00" rank="10" />
+            <subcommittee subcomcode="IF14" rank="5" />
+            <subcommittee subcomcode="IF16" rank="11" />
+            <subcommittee subcomcode="IF17" rank="6" />
+            <subcommittee subcomcode="IF18" rank="9" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA07</statedistrict>
+         <member-info>
+            <namelist>Bera, Ami</namelist>
+            <bioguideID>B001287</bioguideID>
+            <lastname>Bera</lastname>
+            <firstname>Ami</firstname>
+            <middlename />
+            <sort-name>BERA,AMI</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Ami Bera</official-name>
+            <formal-name>Mr. Bera</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>7th</district>
+            <townname>Elk Grove</townname>
+            <office-building>LHOB</office-building>
+            <office-room>1431</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0507</office-zip-suffix>
+            <phone>(202) 225-5716</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="FA00" rank="10" />
+            <committee comcode="SY00" rank="5" />
+            <subcommittee subcomcode="FA05" rank="2" />
+            <subcommittee subcomcode="FA16" rank="2" />
+            <subcommittee subcomcode="SY15" rank="5" />
+            <subcommittee subcomcode="SY16" rank="1" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA08</statedistrict>
+         <member-info>
+            <namelist>Cook, Paul</namelist>
+            <bioguideID>C001094</bioguideID>
+            <lastname>Cook</lastname>
+            <firstname>Paul</firstname>
+            <middlename />
+            <sort-name>COOK,PAUL</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Paul Cook</official-name>
+            <formal-name>Mr. Cook</formal-name>
+            <party>R</party>
+            <caucus>R</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>8th</district>
+            <townname>Yucca Valley</townname>
+            <office-building>LHOB</office-building>
+            <office-room>1222</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0508</office-zip-suffix>
+            <phone>(202) 225-5861</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="AS00" rank="18" />
+            <committee comcode="FA00" rank="13" />
+            <committee comcode="II00" rank="14" />
+            <subcommittee subcomcode="AS25" rank="3" leadership="Vice Chair" />
+            <subcommittee subcomcode="AS28" rank="8" />
+            <subcommittee subcomcode="FA13" rank="6" />
+            <subcommittee subcomcode="FA18" rank="4" />
+            <subcommittee subcomcode="II06" rank="8" />
+            <subcommittee subcomcode="II24" rank="4" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA09</statedistrict>
+         <member-info>
+            <namelist>McNerney, Jerry</namelist>
+            <bioguideID>M001166</bioguideID>
+            <lastname>McNerney</lastname>
+            <firstname>Jerry</firstname>
+            <middlename />
+            <sort-name>MCNERNEY,JERRY</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Jerry McNerney</official-name>
+            <formal-name>Mr. McNerney</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>9th</district>
+            <townname>Stockton</townname>
+            <office-building>RHOB</office-building>
+            <office-room>2265</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0509</office-zip-suffix>
+            <phone>(202) 225-1947</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="IF00" rank="13" />
+            <committee comcode="SY00" rank="10" />
+            <subcommittee subcomcode="IF03" rank="2" />
+            <subcommittee subcomcode="IF16" rank="12" />
+            <subcommittee subcomcode="IF18" rank="6" />
+            <subcommittee subcomcode="SY20" rank="5" />
+            <subcommittee subcomcode="SY21" rank="2" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA10</statedistrict>
+         <member-info>
+            <namelist>Denham, Jeff</namelist>
+            <bioguideID>D000612</bioguideID>
+            <lastname>Denham</lastname>
+            <firstname>Jeff</firstname>
+            <middlename />
+            <sort-name>DENHAM,JEFF</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Jeff Denham</official-name>
+            <formal-name>Mr. Denham</formal-name>
+            <party>R</party>
+            <caucus>R</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>10th</district>
+            <townname>Turlock</townname>
+            <office-building>LHOB</office-building>
+            <office-room>1730</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0510</office-zip-suffix>
+            <phone>(202) 225-4540</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="AG00" rank="12" />
+            <committee comcode="II00" rank="13" />
+            <committee comcode="PW00" rank="12" />
+            <subcommittee subcomcode="AG14" rank="3" />
+            <subcommittee subcomcode="AG15" rank="3" />
+            <subcommittee subcomcode="II13" rank="6" />
+            <subcommittee subcomcode="II24" rank="3" />
+            <subcommittee subcomcode="PW05" rank="9" />
+            <subcommittee subcomcode="PW12" rank="10" />
+            <subcommittee subcomcode="PW14" rank="1" leadership="Chairman" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA11</statedistrict>
+         <member-info>
+            <namelist>DeSaulnier, Mark</namelist>
+            <bioguideID>D000623</bioguideID>
+            <lastname>DeSaulnier</lastname>
+            <firstname>Mark</firstname>
+            <middlename />
+            <sort-name>DESAULNIER,MARK</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Mark DeSaulnier</official-name>
+            <formal-name>Mr. DeSaulnier</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>11th</district>
+            <townname>Concord</townname>
+            <office-building>CHOB</office-building>
+            <office-room>115</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0511</office-zip-suffix>
+            <phone>(202) 225-2095</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="ED00" rank="12" />
+            <committee comcode="GO00" rank="17" />
+            <committee comcode="PW00" rank="27" />
+            <subcommittee subcomcode="ED10" rank="4" />
+            <subcommittee subcomcode="ED13" rank="4" />
+            <subcommittee subcomcode="PW12" rank="13" />
+            <subcommittee subcomcode="PW14" rank="13" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA12</statedistrict>
+         <member-info>
+            <namelist>Pelosi, Nancy</namelist>
+            <bioguideID>P000197</bioguideID>
+            <lastname>Pelosi</lastname>
+            <firstname>Nancy</firstname>
+            <middlename />
+            <sort-name>PELOSI,NANCY</sort-name>
+            <suffix />
+            <courtesy>Ms.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Nancy Pelosi</official-name>
+            <formal-name>Ms. Pelosi</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>12th</district>
+            <townname>San Francisco</townname>
+            <office-building>CHOB</office-building>
+            <office-room>233</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0512</office-zip-suffix>
+            <phone>(202) 225-4965</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee rank="" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA13</statedistrict>
+         <member-info>
+            <namelist>Lee, Barbara</namelist>
+            <bioguideID>L000551</bioguideID>
+            <lastname>Lee</lastname>
+            <firstname>Barbara</firstname>
+            <middlename />
+            <sort-name>LEE,BARBARA</sort-name>
+            <suffix />
+            <courtesy>Ms.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Barbara Lee</official-name>
+            <formal-name>Ms. Lee</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>13th</district>
+            <townname>Oakland</townname>
+            <office-building>RHOB</office-building>
+            <office-room>2267</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0513</office-zip-suffix>
+            <phone>(202) 225-2661</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="AP00" rank="9" />
+            <committee comcode="BU00" rank="2" />
+            <subcommittee subcomcode="AP04" rank="2" />
+            <subcommittee subcomcode="AP07" rank="3" />
+            <subcommittee subcomcode="AP18" rank="3" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA14</statedistrict>
+         <member-info>
+            <namelist>Speier, Jackie</namelist>
+            <bioguideID>S001175</bioguideID>
+            <lastname>Speier</lastname>
+            <firstname>Jackie</firstname>
+            <middlename />
+            <sort-name>SPEIER,JACKIE</sort-name>
+            <suffix />
+            <courtesy>Ms.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Jackie Speier</official-name>
+            <formal-name>Ms. Speier</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>14th</district>
+            <townname>Hillsborough</townname>
+            <office-building>RHOB</office-building>
+            <office-room>2465</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0514</office-zip-suffix>
+            <phone>(202) 225-3531</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="AS00" rank="11" />
+            <committee comcode="IG00" rank="5" />
+            <subcommittee subcomcode="AS02" rank="1" />
+            <subcommittee subcomcode="AS26" rank="4" />
+            <subcommittee subcomcode="IG02" rank="3" />
+            <subcommittee subcomcode="IG03" rank="2" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA15</statedistrict>
+         <member-info>
+            <namelist>Swalwell, Eric</namelist>
+            <bioguideID>S001193</bioguideID>
+            <lastname>Swalwell</lastname>
+            <firstname>Eric</firstname>
+            <middlename />
+            <sort-name>SWALWELL,ERIC</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Eric Swalwell</official-name>
+            <formal-name>Mr. Swalwell of California</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>15th</district>
+            <townname>Pleasanton</townname>
+            <office-building>CHOB</office-building>
+            <office-room>129</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0515</office-zip-suffix>
+            <phone>(202) 225-5065</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="IG00" rank="7" />
+            <committee comcode="JU00" rank="13" />
+            <subcommittee subcomcode="IG01" rank="1" />
+            <subcommittee subcomcode="IG03" rank="4" />
+            <subcommittee subcomcode="JU03" rank="8" />
+            <subcommittee subcomcode="JU05" rank="3" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA16</statedistrict>
+         <member-info>
+            <namelist>Costa, Jim</namelist>
+            <bioguideID>C001059</bioguideID>
+            <lastname>Costa</lastname>
+            <firstname>Jim</firstname>
+            <middlename />
+            <sort-name>COSTA,JIM</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Jim Costa</official-name>
+            <formal-name>Mr. Costa</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>16th</district>
+            <townname>Fresno</townname>
+            <office-building>RHOB</office-building>
+            <office-room>2081</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0516</office-zip-suffix>
+            <phone>(202) 225-3341</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="AG00" rank="3" />
+            <committee comcode="II00" rank="4" />
+            <subcommittee subcomcode="AG14" rank="4" />
+            <subcommittee subcomcode="AG29" rank="1" />
+            <subcommittee subcomcode="II06" rank="3" />
+            <subcommittee subcomcode="II13" rank="3" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA17</statedistrict>
+         <member-info>
+            <namelist>Khanna, Ro</namelist>
+            <bioguideID>K000389</bioguideID>
+            <lastname>Khanna</lastname>
+            <firstname>Ro</firstname>
+            <middlename />
+            <sort-name>KHANNA,RO</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>0</prior-congress>
+            <official-name>Ro Khanna</official-name>
+            <formal-name>Mr. Khanna</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>17th</district>
+            <townname>Fremont</townname>
+            <office-building>CHOB</office-building>
+            <office-room>513</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0517</office-zip-suffix>
+            <phone>(202) 225-2631</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="AS00" rank="25" />
+            <committee comcode="BU00" rank="10" />
+            <subcommittee subcomcode="AS03" rank="9" />
+            <subcommittee subcomcode="AS29" rank="8" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA18</statedistrict>
+         <member-info>
+            <namelist>Eshoo, Anna</namelist>
+            <bioguideID>E000215</bioguideID>
+            <lastname>Eshoo</lastname>
+            <firstname>Anna</firstname>
+            <middlename>G.</middlename>
+            <sort-name>ESHOO,ANNA</sort-name>
+            <suffix />
+            <courtesy>Ms.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Anna G. Eshoo</official-name>
+            <formal-name>Ms. Eshoo</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>18th</district>
+            <townname>Atherton</townname>
+            <office-building>CHOB</office-building>
+            <office-room>241</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0518</office-zip-suffix>
+            <phone>(202) 225-8104</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="IF00" rank="3" />
+            <subcommittee subcomcode="IF14" rank="12" />
+            <subcommittee subcomcode="IF16" rank="8" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA19</statedistrict>
+         <member-info>
+            <namelist>Lofgren, Zoe</namelist>
+            <bioguideID>L000397</bioguideID>
+            <lastname>Lofgren</lastname>
+            <firstname>Zoe</firstname>
+            <middlename />
+            <sort-name>LOFGREN,ZOE</sort-name>
+            <suffix />
+            <courtesy>Ms.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Zoe Lofgren</official-name>
+            <formal-name>Ms. Lofgren</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>19th</district>
+            <townname>San José</townname>
+            <office-building>LHOB</office-building>
+            <office-room>1401</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0519</office-zip-suffix>
+            <phone>(202) 225-3072</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="HA00" rank="2" />
+            <committee comcode="JU00" rank="3" />
+            <committee comcode="SY00" rank="2" />
+            <subcommittee subcomcode="JU01" rank="1" />
+            <subcommittee subcomcode="JU03" rank="10" />
+            <subcommittee subcomcode="SY16" rank="2" />
+            <subcommittee subcomcode="SY20" rank="2" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA20</statedistrict>
+         <member-info>
+            <namelist>Panetta, Jimmy</namelist>
+            <bioguideID>P000613</bioguideID>
+            <lastname>Panetta</lastname>
+            <firstname>Jimmy</firstname>
+            <middlename />
+            <sort-name>PANETTA,JIMMY</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>0</prior-congress>
+            <official-name>Jimmy Panetta</official-name>
+            <formal-name>Mr. Panetta</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>20th</district>
+            <townname>Carmel Valley</townname>
+            <office-building>CHOB</office-building>
+            <office-room>228</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0520</office-zip-suffix>
+            <phone>(202) 225-2861</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="AG00" rank="18" />
+            <committee comcode="II00" rank="15" />
+            <subcommittee subcomcode="AG03" rank="7" />
+            <subcommittee subcomcode="AG14" rank="3" />
+            <subcommittee subcomcode="II10" rank="6" />
+            <subcommittee subcomcode="II13" rank="6" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA21</statedistrict>
+         <member-info>
+            <namelist>Valadao, David</namelist>
+            <bioguideID>V000129</bioguideID>
+            <lastname>Valadao</lastname>
+            <firstname>David</firstname>
+            <middlename>G.</middlename>
+            <sort-name>VALADAO,DAVID</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>David G. Valadao</official-name>
+            <formal-name>Mr. Valadao</formal-name>
+            <party>R</party>
+            <caucus>R</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>21st</district>
+            <townname>Hanford</townname>
+            <office-building>LHOB</office-building>
+            <office-room>1728</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0521</office-zip-suffix>
+            <phone>(202) 225-4695</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="AP00" rank="20" />
+            <subcommittee subcomcode="AP01" rank="4" />
+            <subcommittee subcomcode="AP18" rank="4" />
+            <subcommittee subcomcode="AP20" rank="6" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA22</statedistrict>
+         <member-info>
+            <namelist>Nunes, Devin</namelist>
+            <bioguideID>N000181</bioguideID>
+            <lastname>Nunes</lastname>
+            <firstname>Devin</firstname>
+            <middlename />
+            <sort-name>NUNES,DEVIN</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Devin Nunes</official-name>
+            <formal-name>Mr. Nunes</formal-name>
+            <party>R</party>
+            <caucus>R</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>22nd</district>
+            <townname>Tulare</townname>
+            <office-building>LHOB</office-building>
+            <office-room>1013</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0522</office-zip-suffix>
+            <phone>(202) 225-2523</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="IG00" rank="1" leadership="Chairman" />
+            <committee comcode="WM00" rank="3" />
+            <subcommittee subcomcode="WM02" rank="3" />
+            <subcommittee subcomcode="WM04" rank="2" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA23</statedistrict>
+         <member-info>
+            <namelist>McCarthy, Kevin</namelist>
+            <bioguideID>M001165</bioguideID>
+            <lastname>McCarthy</lastname>
+            <firstname>Kevin</firstname>
+            <middlename />
+            <sort-name>MCCARTHY,KEVIN</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Kevin McCarthy</official-name>
+            <formal-name>Mr. McCarthy</formal-name>
+            <party>R</party>
+            <caucus>R</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>23rd</district>
+            <townname>Bakersfield</townname>
+            <office-building>RHOB</office-building>
+            <office-room>2421</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0523</office-zip-suffix>
+            <phone>(202) 225-2915</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee rank="" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA24</statedistrict>
+         <member-info>
+            <namelist>Carbajal, Salud</namelist>
+            <bioguideID>C001112</bioguideID>
+            <lastname>Carbajal</lastname>
+            <firstname>Salud</firstname>
+            <middlename>O.</middlename>
+            <sort-name>CARBAJAL,SALUD</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>0</prior-congress>
+            <official-name>Salud O. Carbajal</official-name>
+            <formal-name>Mr. Carbajal</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>24th</district>
+            <townname>Santa Barbara</townname>
+            <office-building>CHOB</office-building>
+            <office-room>212</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0524</office-zip-suffix>
+            <phone>(202) 225-3601</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="AS00" rank="22" />
+            <committee comcode="BU00" rank="12" />
+            <subcommittee subcomcode="AS03" rank="6" />
+            <subcommittee subcomcode="AS25" rank="7" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA25</statedistrict>
+         <member-info>
+            <namelist>Knight, Stephen</namelist>
+            <bioguideID>K000387</bioguideID>
+            <lastname>Knight</lastname>
+            <firstname>Stephen</firstname>
+            <middlename />
+            <sort-name>KNIGHT,STEPHEN</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Stephen Knight</official-name>
+            <formal-name>Mr. Knight</formal-name>
+            <party>R</party>
+            <caucus>R</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>25th</district>
+            <townname>Palmdale</townname>
+            <office-building>LHOB</office-building>
+            <office-room>1023</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0525</office-zip-suffix>
+            <phone>(202) 225-1956</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="AS00" rank="25" />
+            <committee comcode="SM00" rank="6" />
+            <committee comcode="SY00" rank="10" />
+            <subcommittee subcomcode="AS25" rank="6" />
+            <subcommittee subcomcode="AS28" rank="10" />
+            <subcommittee subcomcode="SM23" rank="1" leadership="Chairman" />
+            <subcommittee subcomcode="SM27" rank="2" />
+            <subcommittee subcomcode="SY15" rank="4" />
+            <subcommittee subcomcode="SY16" rank="7" />
+            <subcommittee subcomcode="SY20" rank="8" leadership="Vice Chair" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA26</statedistrict>
+         <member-info>
+            <namelist>Brownley, Julia</namelist>
+            <bioguideID>B001285</bioguideID>
+            <lastname>Brownley</lastname>
+            <firstname>Julia</firstname>
+            <middlename />
+            <sort-name>BROWNLEY,JULIA</sort-name>
+            <suffix />
+            <courtesy>Ms.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Julia Brownley</official-name>
+            <formal-name>Ms. Brownley of California</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>26th</district>
+            <townname>Westlake Village</townname>
+            <office-building>LHOB</office-building>
+            <office-room>1019</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0526</office-zip-suffix>
+            <phone>(202) 225-5811</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="PW00" rank="22" />
+            <committee comcode="VR00" rank="3" />
+            <subcommittee subcomcode="PW02" rank="12" />
+            <subcommittee subcomcode="PW05" rank="9" />
+            <subcommittee subcomcode="PW12" rank="10" />
+            <subcommittee subcomcode="VR03" rank="1" />
+            <subcommittee subcomcode="VR09" rank="1" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA27</statedistrict>
+         <member-info>
+            <namelist>Chu, Judy</namelist>
+            <bioguideID>C001080</bioguideID>
+            <lastname>Chu</lastname>
+            <firstname>Judy</firstname>
+            <middlename />
+            <sort-name>CHU,JUDY</sort-name>
+            <suffix />
+            <courtesy>Ms.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Judy Chu</official-name>
+            <formal-name>Ms. Judy Chu of California</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>27th</district>
+            <townname>Monterey Park</townname>
+            <office-building>RHOB</office-building>
+            <office-room>2423</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0527</office-zip-suffix>
+            <phone>(202) 225-5464</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="SM00" rank="6" />
+            <committee comcode="WM00" rank="16" />
+            <subcommittee subcomcode="SM27" rank="2" />
+            <subcommittee subcomcode="WM02" rank="7" />
+            <subcommittee subcomcode="WM03" rank="4" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA28</statedistrict>
+         <member-info>
+            <namelist>Schiff, Adam</namelist>
+            <bioguideID>S001150</bioguideID>
+            <lastname>Schiff</lastname>
+            <firstname>Adam</firstname>
+            <middlename>B.</middlename>
+            <sort-name>SCHIFF,ADAM</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Adam B. Schiff</official-name>
+            <formal-name>Mr. Schiff</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>28th</district>
+            <townname>Burbank</townname>
+            <office-building>RHOB</office-building>
+            <office-room>2372</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0528</office-zip-suffix>
+            <phone>(202) 225-4176</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="IG00" rank="1" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA29</statedistrict>
+         <member-info>
+            <namelist>Cárdenas, Tony</namelist>
+            <bioguideID>C001097</bioguideID>
+            <lastname>Cárdenas</lastname>
+            <firstname>Tony</firstname>
+            <middlename />
+            <sort-name>CARDENAS,TONY</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Tony Cárdenas</official-name>
+            <formal-name>Mr. Cárdenas</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>29th</district>
+            <townname>Pacoima</townname>
+            <office-building>LHOB</office-building>
+            <office-room>1510</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0529</office-zip-suffix>
+            <phone>(202) 225-6131</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="IF00" rank="21" />
+            <subcommittee subcomcode="IF14" rank="11" />
+            <subcommittee subcomcode="IF17" rank="4" />
+            <subcommittee subcomcode="IF18" rank="7" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA30</statedistrict>
+         <member-info>
+            <namelist>Sherman, Brad</namelist>
+            <bioguideID>S000344</bioguideID>
+            <lastname>Sherman</lastname>
+            <firstname>Brad</firstname>
+            <middlename />
+            <sort-name>SHERMAN,BRAD</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Brad Sherman</official-name>
+            <formal-name>Mr. Sherman</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>30th</district>
+            <townname>Sherman Oaks</townname>
+            <office-building>RHOB</office-building>
+            <office-room>2181</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0530</office-zip-suffix>
+            <phone>(202) 225-5911</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="BA00" rank="4" />
+            <committee comcode="FA00" rank="2" />
+            <subcommittee subcomcode="BA04" rank="5" />
+            <subcommittee subcomcode="BA16" rank="2" />
+            <subcommittee subcomcode="BA20" rank="4" />
+            <subcommittee subcomcode="FA05" rank="1" />
+            <subcommittee subcomcode="FA14" rank="2" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA31</statedistrict>
+         <member-info>
+            <namelist>Aguilar, Pete</namelist>
+            <bioguideID>A000371</bioguideID>
+            <lastname>Aguilar</lastname>
+            <firstname>Pete</firstname>
+            <middlename />
+            <sort-name>AGUILAR,PETE</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Pete Aguilar</official-name>
+            <formal-name>Mr. Aguilar</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>31st</district>
+            <townname>Redlands</townname>
+            <office-building>LHOB</office-building>
+            <office-room>1223</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0531</office-zip-suffix>
+            <phone>(202) 225-3201</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="AP00" rank="22" />
+            <subcommittee subcomcode="AP10" rank="4" />
+            <subcommittee subcomcode="AP20" rank="4" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA32</statedistrict>
+         <member-info>
+            <namelist>Napolitano, Grace</namelist>
+            <bioguideID>N000179</bioguideID>
+            <lastname>Napolitano</lastname>
+            <firstname>Grace</firstname>
+            <middlename>F.</middlename>
+            <sort-name>NAPOLITANO,GRACE</sort-name>
+            <suffix />
+            <courtesy>Mrs.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Grace F. Napolitano</official-name>
+            <formal-name>Mrs. Napolitano</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>32nd</district>
+            <townname>Norwalk</townname>
+            <office-building>LHOB</office-building>
+            <office-room>1610</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0532</office-zip-suffix>
+            <phone>(202) 225-5256</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="II00" rank="2" />
+            <committee comcode="PW00" rank="8" />
+            <subcommittee subcomcode="II13" rank="2" />
+            <subcommittee subcomcode="PW02" rank="1" />
+            <subcommittee subcomcode="PW05" rank="13" />
+            <subcommittee subcomcode="PW12" rank="16" />
+            <subcommittee subcomcode="PW13" rank="4" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA33</statedistrict>
+         <member-info>
+            <namelist>Lieu, Ted</namelist>
+            <bioguideID>L000582</bioguideID>
+            <lastname>Lieu</lastname>
+            <firstname>Ted</firstname>
+            <middlename />
+            <sort-name>LIEU,TED</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Ted Lieu</official-name>
+            <formal-name>Mr. Ted Lieu of California</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>33rd</district>
+            <townname>Torrance</townname>
+            <office-building>CHOB</office-building>
+            <office-room>236</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0533</office-zip-suffix>
+            <phone>(202) 225-3976</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="FA00" rank="21" />
+            <committee comcode="JU00" rank="14" />
+            <subcommittee subcomcode="FA13" rank="9" />
+            <subcommittee subcomcode="JU03" rank="9" />
+            <subcommittee subcomcode="JU08" rank="7" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA34</statedistrict>
+         <member-info>
+            <namelist />
+            <bioguideID />
+            <lastname />
+            <firstname />
+            <middlename />
+            <sort-name />
+            <suffix />
+            <courtesy />
+            <prior-congress>0</prior-congress>
+            <official-name />
+            <formal-name />
+            <party />
+            <caucus />
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>34th</district>
+            <townname />
+            <office-building>LHOB</office-building>
+            <office-room>1226</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0534</office-zip-suffix>
+            <phone>(202) 225-6235</phone>
+            <elected-date date="" />
+            <sworn-date date="" />
+            <footnote-ref>0</footnote-ref>
+            <footnote>Vacancy due to the resignation of Xavier Becerra, January 24, 2017.</footnote>
+         </member-info>
+         <predecessor-info cause="R">
+            <pred-lastname>Becerra</pred-lastname>
+            <pred-firstname>Xavier</pred-firstname>
+            <pred-middlename />
+            <pred-official-name>Xavier Becerra</pred-official-name>
+            <pred-formal-name>Mr. Becerra</pred-formal-name>
+            <pred-memindex>B000287</pred-memindex>
+            <pred-sort-name>BECERRA,XAVIER</pred-sort-name>
+            <pred-party>D</pred-party>
+            <pred-vacate-date date="20170124">January 24, 2017</pred-vacate-date>
+            <pred-footnote-ref>0</pred-footnote-ref>
+            <pred-footnote>Vacancy due to the resignation of Xavier Becerra, January 24, 2017.</pred-footnote>
+         </predecessor-info>
+         <committee-assignments>
+            <committee rank="" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA35</statedistrict>
+         <member-info>
+            <namelist>Torres, Norma</namelist>
+            <bioguideID>T000474</bioguideID>
+            <lastname>Torres</lastname>
+            <firstname>Norma</firstname>
+            <middlename>J.</middlename>
+            <sort-name>TORRES,NORMA</sort-name>
+            <suffix />
+            <courtesy>Mrs.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Norma J. Torres</official-name>
+            <formal-name>Mrs. Torres</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>35th</district>
+            <townname>Pomona</townname>
+            <office-building>LHOB</office-building>
+            <office-room>1713</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0535</office-zip-suffix>
+            <phone>(202) 225-6161</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="FA00" rank="17" />
+            <committee comcode="II00" rank="10" />
+            <subcommittee subcomcode="FA07" rank="4" />
+            <subcommittee subcomcode="FA18" rank="5" />
+            <subcommittee subcomcode="II10" rank="4" />
+            <subcommittee subcomcode="II24" rank="1" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA36</statedistrict>
+         <member-info>
+            <namelist>Ruiz, Raul</namelist>
+            <bioguideID>R000599</bioguideID>
+            <lastname>Ruiz</lastname>
+            <firstname>Raul</firstname>
+            <middlename />
+            <sort-name>RUIZ,RAUL</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Raul Ruiz</official-name>
+            <formal-name>Mr. Ruiz</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>36th</district>
+            <townname>Coachella</townname>
+            <office-building>LHOB</office-building>
+            <office-room>1319</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0536</office-zip-suffix>
+            <phone>(202) 225-5330</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="IF00" rank="22" />
+            <subcommittee subcomcode="IF02" rank="6" />
+            <subcommittee subcomcode="IF16" rank="5" />
+            <subcommittee subcomcode="IF18" rank="2" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA37</statedistrict>
+         <member-info>
+            <namelist>Bass, Karen</namelist>
+            <bioguideID>B001270</bioguideID>
+            <lastname>Bass</lastname>
+            <firstname>Karen</firstname>
+            <middlename />
+            <sort-name>BASS,KAREN</sort-name>
+            <suffix />
+            <courtesy>Ms.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Karen Bass</official-name>
+            <formal-name>Ms. Bass</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>37th</district>
+            <townname>Los Angeles</townname>
+            <office-building>RHOB</office-building>
+            <office-room>2241</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0537</office-zip-suffix>
+            <phone>(202) 225-7084</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="FA00" rank="7" />
+            <committee comcode="JU00" rank="9" />
+            <subcommittee subcomcode="FA16" rank="1" />
+            <subcommittee subcomcode="JU03" rank="5" />
+            <subcommittee subcomcode="JU08" rank="3" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA38</statedistrict>
+         <member-info>
+            <namelist>Sánchez, Linda</namelist>
+            <bioguideID>S001156</bioguideID>
+            <lastname>Sánchez</lastname>
+            <firstname>Linda</firstname>
+            <middlename>T.</middlename>
+            <sort-name>SANCHEZ,LINDA</sort-name>
+            <suffix />
+            <courtesy>Ms.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Linda T. Sánchez</official-name>
+            <formal-name>Ms. Sánchez</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>38th</district>
+            <townname>Whittier</townname>
+            <office-building>RHOB</office-building>
+            <office-room>2329</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0538</office-zip-suffix>
+            <phone>(202) 225-6676</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="WM00" rank="12" />
+            <subcommittee subcomcode="WM01" rank="4" />
+            <subcommittee subcomcode="WM05" rank="3" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA39</statedistrict>
+         <member-info>
+            <namelist>Royce, Edward</namelist>
+            <bioguideID>R000487</bioguideID>
+            <lastname>Royce</lastname>
+            <firstname>Edward</firstname>
+            <middlename>R.</middlename>
+            <sort-name>ROYCE,EDWARD</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Edward R. Royce</official-name>
+            <formal-name>Mr. Royce of California</formal-name>
+            <party>R</party>
+            <caucus>R</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>39th</district>
+            <townname>Fullerton</townname>
+            <office-building>RHOB</office-building>
+            <office-room>2310</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0539</office-zip-suffix>
+            <phone>(202) 225-4111</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="BA00" rank="3" />
+            <committee comcode="FA00" rank="1" leadership="Chairman" />
+            <subcommittee subcomcode="BA04" rank="3" />
+            <subcommittee subcomcode="BA15" rank="3" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA40</statedistrict>
+         <member-info>
+            <namelist>Roybal-Allard, Lucille</namelist>
+            <bioguideID>R000486</bioguideID>
+            <lastname>Roybal-Allard</lastname>
+            <firstname>Lucille</firstname>
+            <middlename />
+            <sort-name>ROYBALALLARD,LUCILLE</sort-name>
+            <suffix />
+            <courtesy>Ms.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Lucille Roybal-Allard</official-name>
+            <formal-name>Ms. Roybal-Allard</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>40th</district>
+            <townname>Downey</townname>
+            <office-building>RHOB</office-building>
+            <office-room>2083</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0540</office-zip-suffix>
+            <phone>(202) 225-1766</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="AP00" rank="7" />
+            <subcommittee subcomcode="AP07" rank="2" />
+            <subcommittee subcomcode="AP15" rank="1" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA41</statedistrict>
+         <member-info>
+            <namelist>Takano, Mark</namelist>
+            <bioguideID>T000472</bioguideID>
+            <lastname>Takano</lastname>
+            <firstname>Mark</firstname>
+            <middlename />
+            <sort-name>TAKANO,MARK</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Mark Takano</official-name>
+            <formal-name>Mr. Takano</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>41st</district>
+            <townname>Riverside</townname>
+            <office-building>LHOB</office-building>
+            <office-room>1507</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0541</office-zip-suffix>
+            <phone>(202) 225-2305</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="ED00" rank="10" />
+            <committee comcode="SY00" rank="14" />
+            <committee comcode="VR00" rank="2" />
+            <subcommittee subcomcode="ED10" rank="1" />
+            <subcommittee subcomcode="ED13" rank="8" />
+            <subcommittee subcomcode="SY20" rank="8" />
+            <subcommittee subcomcode="VR03" rank="2" />
+            <subcommittee subcomcode="VR10" rank="2" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA42</statedistrict>
+         <member-info>
+            <namelist>Calvert, Ken</namelist>
+            <bioguideID>C000059</bioguideID>
+            <lastname>Calvert</lastname>
+            <firstname>Ken</firstname>
+            <middlename />
+            <sort-name>CALVERT,KEN</sort-name>
+            <suffix />
+            <courtesy>Mr.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Ken Calvert</official-name>
+            <formal-name>Mr. Calvert</formal-name>
+            <party>R</party>
+            <caucus>R</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>42nd</district>
+            <townname>Corona</townname>
+            <office-building>RHOB</office-building>
+            <office-room>2205</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0542</office-zip-suffix>
+            <phone>(202) 225-1986</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="AP00" rank="8" />
+            <subcommittee subcomcode="AP02" rank="3" />
+            <subcommittee subcomcode="AP06" rank="1" leadership="Chairman" />
+            <subcommittee subcomcode="AP10" rank="2" />
+         </committee-assignments>
+      </member>
+      <member>
+         <statedistrict>CA43</statedistrict>
+         <member-info>
+            <namelist>Waters, Maxine</namelist>
+            <bioguideID>W000187</bioguideID>
+            <lastname>Waters</lastname>
+            <firstname>Maxine</firstname>
+            <middlename />
+            <sort-name>WATERS,MAXINE</sort-name>
+            <suffix />
+            <courtesy>Ms.</courtesy>
+            <prior-congress>114</prior-congress>
+            <official-name>Maxine Waters</official-name>
+            <formal-name>Ms. Maxine Waters of California</formal-name>
+            <party>D</party>
+            <caucus>D</caucus>
+            <state postal-code="CA">
+               <state-fullname>California</state-fullname>
+            </state>
+            <district>43rd</district>
+            <townname>Los Angeles</townname>
+            <office-building>RHOB</office-building>
+            <office-room>2221</office-room>
+            <office-zip>20515</office-zip>
+            <office-zip-suffix>0543</office-zip-suffix>
+            <phone>(202) 225-2201</phone>
+            <elected-date date="20161108">November  8, 2016</elected-date>
+            <sworn-date date="20170103">January  3, 2017</sworn-date>
+         </member-info>
+         <committee-assignments>
+            <committee comcode="BA00" rank="1" />
+            <subcommittee subcomcode="BA01" rank="12" leadership="Ex Officio" />
+            <subcommittee subcomcode="BA04" rank="11" leadership="Ex Officio" />
+            <subcommittee subcomcode="BA09" rank="10" leadership="Ex Officio" />
+            <subcommittee subcomcode="BA15" rank="12" leadership="Ex Officio" />
+            <subcommittee subcomcode="BA16" rank="13" leadership="Ex Officio" />
+            <subcommittee subcomcode="BA20" rank="10" leadership="Ex Officio" />
+         </committee-assignments>
+      </member>
+   </members>
+</MemberData>
